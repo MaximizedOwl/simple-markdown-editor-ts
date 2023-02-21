@@ -1,24 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
 
 function App() {
+  const [str, setStr] = useState('');
+
+  const textareaChange = () => {
+    // テキストエリアの内容を取得し、label'output'に出力する。
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className='App'>
+      <header className='App-header'>
+        <div>
+          <h1>Simple Markdown Editor</h1>
+        </div>
       </header>
+      <main>
+        <div className='main-content'>
+          <div className='input'>
+            <textarea
+              name='postContent'
+              value={str}
+              rows={30}
+              cols={50}
+              onChange={(e) => setStr(e.target.value)}
+            />
+          </div>
+          <div className='output'>
+            <label>{str}</label>
+          </div>
+        </div>
+      </main>
     </div>
   );
 }
