@@ -1,17 +1,9 @@
-import { marked } from 'marked';
 import { useState } from 'react';
+import ReactMarkdown from 'react-markdown';
 import './App.css';
 
 function App() {
   const [str, setStr] = useState('');
-
-  marked.use({
-    gfm: true,
-  });
-
-  const textareaChange = () => {
-    // テキストエリアの内容を取得し、label'output'に出力する。
-  };
 
   return (
     <div className='App'>
@@ -25,14 +17,16 @@ function App() {
           <div className='input'>
             <textarea
               name='postContent'
-              value={marked.parse(str)}
+              value={str}
               rows={30}
               cols={50}
               onChange={(e) => setStr(e.target.value)}
             />
           </div>
-          <div className='output'>
-            <label>{str}</label>
+          <div id='output' className='output'>
+            <label id='label-output'>
+              <ReactMarkdown>{str}</ReactMarkdown>
+            </label>
           </div>
         </div>
       </main>

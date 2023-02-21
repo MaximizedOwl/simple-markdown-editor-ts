@@ -32,3 +32,48 @@ npm trends によると、過去一年間のダウンロード数では marked �
 1. https://github.com/remarkjs/react-markdown#security
 2. https://marked.js.org/#usage
 3. https://npmtrends.com/marked-vs-react-markdown-vs-remark
+
+# react-markdown の実装
+
+ドキュメントには下記のように記載がある。
+
+```ts
+import React from 'react';
+import ReactMarkdown from 'react-markdown';
+import ReactDom from 'react-dom';
+
+ReactDom.render(
+  <ReactMarkdown># Hello, *world*!</ReactMarkdown>,
+  document.body
+);
+```
+
+しかし実際は
+
+```ts
+import { useState } from 'react';
+import ReactMarkdown from 'react-markdown';
+
+...
+
+function App() {
+  const [str, setStr] = useState('');
+
+  return (
+    ...
+
+            <label id='label-output'>
+              <ReactMarkdown>{str}</ReactMarkdown>
+            </label>
+    ...
+
+export default App;
+
+```
+
+のように、ReactMarkdown をコンポーネントに見立ててその中にテキストエリアで入力している state の変数を出力してあげるだけで良い。
+
+## 参考文献
+
+1. [[react-markdown]で markdown 記法テキストを html にレンダリングする。](https://floclo.net/pages/cl1lo6qju022509mmmagwkkqu)
+2. [remarkjs/react-markdown](https://github.com/remarkjs/react-markdown#security)
