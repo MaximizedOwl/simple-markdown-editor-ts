@@ -18,15 +18,18 @@ function App() {
           <div className='input'>
             <textarea
               name='postContent'
+              id='textarea-input'
               value={str}
-              rows={30}
-              cols={50}
               onChange={(e) => setStr(e.target.value)}
             />
           </div>
-          <div id='output' className='output'>
+          <div className='output'>
             <label id='label-output'>
-              <ReactMarkdown remarkPlugins={[remarkGfm]}>{str}</ReactMarkdown>
+              <ReactMarkdown
+                className='reactmarkdown'
+                remarkPlugins={[remarkGfm]}>
+                {str}
+              </ReactMarkdown>
             </label>
           </div>
         </div>
