@@ -1,8 +1,13 @@
+import { marked } from 'marked';
 import { useState } from 'react';
 import './App.css';
 
 function App() {
   const [str, setStr] = useState('');
+
+  marked.use({
+    gfm: true,
+  });
 
   const textareaChange = () => {
     // テキストエリアの内容を取得し、label'output'に出力する。
@@ -20,7 +25,7 @@ function App() {
           <div className='input'>
             <textarea
               name='postContent'
-              value={str}
+              value={marked.parse(str)}
               rows={30}
               cols={50}
               onChange={(e) => setStr(e.target.value)}

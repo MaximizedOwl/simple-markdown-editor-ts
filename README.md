@@ -1,46 +1,34 @@
-# Getting Started with Create React App
+# Markdown パーサーを react-markdown にした理由
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+大きく 2 つ。
 
-## Available Scripts
+1. 今回は React を使っているので React に最適化されている(であろう)ほうを使いたかった。
+2. セキュリティ方面をパーサーの方でやってくれる箇所があり、安心だった。
 
-In the project directory, you can run:
+npm trends によると、過去一年間のダウンロード数では marked が 700 万を超えるのに対し、react-markdown は 200 万に満たない。
+このことから最初は一番メジャーな marked を利用することを考えた。知見が多く落ちていると考えたためだ。
 
-### `npm start`
+しかしながら react-markdown も継続的にメンテナンスされていることやスター数からみても知見はそれなりに溜まっていそうではあった。
+そして決め手となったのが上記 2 点だった。
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## ドキュメント比較
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### marked
 
-### `npm test`
+> Warning: 🚨 Marked does not sanitize the output HTML. If you are processing potentially unsafe strings, it's important to filter for possible XSS attacks. Some filtering options include DOMPurify (recommended), js-xss, sanitize-html and insane on the output HTML! 🚨
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+とある。
+つまりセキュリティ問題に対して開発者が対応しないといけない箇所があるということだった。今回、サクッと実装したかった自分にとってはこれに対応するのが面倒に感じた。
 
-### `npm run build`
+### react-markdown
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+> Use of react-markdown is secure by default. Overwriting transformLinkUri or transformImageUri to something insecure will open you up to XSS vectors. Furthermore, the remarkPlugins, rehypePlugins, and components you use may be insecure.  
+> To make sure the content is completely safe, even after what plugins do, use rehype-sanitize. It lets you define your own schema of what is and isn’t allowed.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+とあり、XSS 攻撃への耐性が標準搭載されている。
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 参考文献
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. https://github.com/remarkjs/react-markdown#security
+2. https://marked.js.org/#usage
+3. https://npmtrends.com/marked-vs-react-markdown-vs-remark
