@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import './App.css';
 
 function App() {
@@ -25,7 +26,7 @@ function App() {
           </div>
           <div id='output' className='output'>
             <label id='label-output'>
-              <ReactMarkdown>{str}</ReactMarkdown>
+              <ReactMarkdown remarkPlugins={[remarkGfm]}>{str}</ReactMarkdown>
             </label>
           </div>
         </div>
