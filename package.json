@@ -1,5 +1,6 @@
 {
   "name": "simple-markdown-editor-ts",
+  "license": "UNLICENSED",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
