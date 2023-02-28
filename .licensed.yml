@@ -1,0 +1,14 @@
+#name: 'My App' # デフォルトはsource_pathの名前
+#source_path: './app' # デフォルトはカレントディレクトリ
+#cache_path: './cache' # source_pathからの相対パス。デフォルトは .licenses
+
+sources: # 今回はnpmを使います
+  npm: true
+
+allowed: # 以下のライセンスならOKとします
+  - mit
+  - apache-2.0
+  - isc
+  - bsd-3-clause
+  - bsd-2-clause
+  - cc0-1.0
