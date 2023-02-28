@@ -1,0 +1,11 @@
+---
+name: svg-parser
+version: 2.0.4
+type: npm
+summary: Create a JSON-friendly object from an SVG string
+homepage: https://github.com/Rich-Harris/svg-parser#README
+license: mit
+licenses:
+- sources: README.md
+  text: MIT
+notices: []

@@ -1,0 +1,232 @@
+Performing C SOURCE FILE Test HAVE_STRUCT_STAT_ST_MTIM failed with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-kl2zi2
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_ec5ce/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_ec5ce.dir/build.make CMakeFiles/cmTC_ec5ce.dir/build
+Building C object CMakeFiles/cmTC_ec5ce.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DHAVE_STRUCT_STAT_ST_MTIM  -fPIC  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -MD -MT CMakeFiles/cmTC_ec5ce.dir/src.c.o -MF CMakeFiles/cmTC_ec5ce.dir/src.c.o.d -o CMakeFiles/cmTC_ec5ce.dir/src.c.o -c /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-kl2zi2/src.c
+/Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-kl2zi2/src.c:7:36: error: no member named 'st_mtim' in 'struct stat'
+  (void)sizeof(((struct stat *)0)->st_mtim);
+               ~~~~~~~~~~~~~~~~~~  ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_ec5ce.dir/src.c.o] Error 1
+make: *** [cmTC_ec5ce/fast] Error 2
+
+
+Source file was:
+
+#include <sys/types.h>
+#include <sys/stat.h>
+
+int main()
+{
+  (void)sizeof(((struct stat *)0)->st_mtim);
+  return 0;
+}
+
+
+Performing C SOURCE FILE Test HAVE_STRUCT_STAT_MTIME_NSEC failed with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-dBbXE0
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_03c53/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_03c53.dir/build.make CMakeFiles/cmTC_03c53.dir/build
+Building C object CMakeFiles/cmTC_03c53.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DHAVE_STRUCT_STAT_MTIME_NSEC  -fPIC  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -MD -MT CMakeFiles/cmTC_03c53.dir/src.c.o -MF CMakeFiles/cmTC_03c53.dir/src.c.o.d -o CMakeFiles/cmTC_03c53.dir/src.c.o -c /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-dBbXE0/src.c
+/Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-dBbXE0/src.c:6:36: error: no member named 'st_mtime_nsec' in 'struct stat'; did you mean 'st_mtimespec'?
+  (void)sizeof(((struct stat *)0)->st_mtime_nsec);
+                                   ^~~~~~~~~~~~~
+                                   st_mtimespec
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/sys/stat.h:182:13: note: 'st_mtimespec' declared here
+struct stat __DARWIN_STRUCT_STAT64;
+            ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/sys/stat.h:166:2: note: expanded from macro '__DARWIN_STRUCT_STAT64'
+        __DARWIN_STRUCT_STAT64_TIMES \
+        ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/sys/stat.h:130:18: note: expanded from macro '__DARWIN_STRUCT_STAT64_TIMES'
+        struct timespec st_mtimespec;           /* time of last data modification */ \
+                        ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_03c53.dir/src.c.o] Error 1
+make: *** [cmTC_03c53/fast] Error 2
+
+
+Source file was:
+
+#include <sys/stat.h>
+
+int main()
+{
+  (void)sizeof(((struct stat *)0)->st_mtime_nsec);
+  return 0;
+}
+
+
+Performing C SOURCE FILE Test IS_WC99_C11_COMPAT_SUPPORTED failed with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-Dr7ch3
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_03b6a/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_03b6a.dir/build.make CMakeFiles/cmTC_03b6a.dir/build
+Building C object CMakeFiles/cmTC_03b6a.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DIS_WC99_C11_COMPAT_SUPPORTED  -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7   -Wc99-c11-compat -MD -MT CMakeFiles/cmTC_03b6a.dir/src.c.o -MF CMakeFiles/cmTC_03b6a.dir/src.c.o.d -o CMakeFiles/cmTC_03b6a.dir/src.c.o -c /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-Dr7ch3/src.c
+warning: unknown warning option '-Wc99-c11-compat' [-Wunknown-warning-option]
+1 warning generated.
+Linking C executable cmTC_03b6a
+/usr/local/Cellar/cmake/3.25.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_03b6a.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_03b6a.dir/src.c.o -o cmTC_03b6a 
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test IS_WIMPLICIT_FALLTHROUGH_1_SUPPORTED failed with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-QWaVYG
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_b03aa/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_b03aa.dir/build.make CMakeFiles/cmTC_b03aa.dir/build
+Building C object CMakeFiles/cmTC_b03aa.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DIS_WIMPLICIT_FALLTHROUGH_1_SUPPORTED  -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat -Wformat-security  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7   -Wimplicit-fallthrough=1 -MD -MT CMakeFiles/cmTC_b03aa.dir/src.c.o -MF CMakeFiles/cmTC_b03aa.dir/src.c.o.d -o CMakeFiles/cmTC_b03aa.dir/src.c.o -c /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-QWaVYG/src.c
+warning: unknown warning option '-Wimplicit-fallthrough=1'; did you mean '-Wimplicit-fallthrough'? [-Wunknown-warning-option]
+1 warning generated.
+Linking C executable cmTC_b03aa
+/usr/local/Cellar/cmake/3.25.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b03aa.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat -Wformat-security  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_b03aa.dir/src.c.o -o cmTC_b03aa 
+
+
+Source file was:
+int main(void) { return 0; }
+
+Determining if the include file windows.h exists failed with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-c9iOQ5
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_23270/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_23270.dir/build.make CMakeFiles/cmTC_23270.dir/build
+Building C object CMakeFiles/cmTC_23270.dir/CheckIncludeFile.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat -Wformat-security  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -MD -MT CMakeFiles/cmTC_23270.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_23270.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_23270.dir/CheckIncludeFile.c.o -c /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-c9iOQ5/CheckIncludeFile.c
+/Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-c9iOQ5/CheckIncludeFile.c:1:10: fatal error: 'windows.h' file not found
+#include <windows.h>
+         ^~~~~~~~~~~
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_23270.dir/CheckIncludeFile.c.o] Error 1
+make: *** [cmTC_23270/fast] Error 2
+
+
+
+Determining if the function _strtoi64 exists failed with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-XtmzUN
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_e6e32/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_e6e32.dir/build.make CMakeFiles/cmTC_e6e32.dir/build
+Building C object CMakeFiles/cmTC_e6e32.dir/CheckFunctionExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat -Wformat-security -DCHECK_FUNCTION_EXISTS=_strtoi64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -MD -MT CMakeFiles/cmTC_e6e32.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_e6e32.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_e6e32.dir/CheckFunctionExists.c.o -c /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-XtmzUN/CheckFunctionExists.c
+Linking C executable cmTC_e6e32
+/usr/local/Cellar/cmake/3.25.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e6e32.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat -Wformat-security -DCHECK_FUNCTION_EXISTS=_strtoi64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_e6e32.dir/CheckFunctionExists.c.o -o cmTC_e6e32 
+Undefined symbols for architecture x86_64:
+  "__strtoi64", referenced from:
+      _main in CheckFunctionExists.c.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [cmTC_e6e32] Error 1
+make: *** [cmTC_e6e32/fast] Error 2
+
+
+
+Determining if the prototype qsort_r exists for GIT_QSORT_R_GNU failed with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-tRmgXg
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_8887e/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_8887e.dir/build.make CMakeFiles/cmTC_8887e.dir/build
+Building C object CMakeFiles/cmTC_8887e.dir/CheckPrototypeDefinition.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat -Wformat-security  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -MD -MT CMakeFiles/cmTC_8887e.dir/CheckPrototypeDefinition.c.o -MF CMakeFiles/cmTC_8887e.dir/CheckPrototypeDefinition.c.o.d -o CMakeFiles/cmTC_8887e.dir/CheckPrototypeDefinition.c.o -c /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-tRmgXg/CheckPrototypeDefinition.c
+/Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-tRmgXg/CheckPrototypeDefinition.c:14:6: error: conflicting types for 'qsort_r'
+void qsort_r(void *base, size_t nmemb, size_t size, int (*compar)(const void *, const void *, void *), void *arg) {
+     ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/stdlib.h:341:7: note: previous declaration is here
+void     qsort_r(void *__base, size_t __nel, size_t __width, void *,
+         ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_8887e.dir/CheckPrototypeDefinition.c.o] Error 1
+make: *** [cmTC_8887e/fast] Error 2
+
+
+
+#include <stdlib.h>
+
+
+static void cmakeRequireSymbol(int dummy, ...) {
+  (void) dummy;
+}
+
+static void checkSymbol(void) {
+#ifndef qsort_r
+  cmakeRequireSymbol(0, &qsort_r);
+#endif
+}
+
+void qsort_r(void *base, size_t nmemb, size_t size, int (*compar)(const void *, const void *, void *), void *arg) {
+  return ;
+}
+
+#ifdef __CLASSIC_C__
+int main() {
+  int ac;
+  char*av[];
+#else
+int main(int ac, char *av[]) {
+#endif
+  checkSymbol();
+  if (ac > 1000) {
+    return *av[0];
+  }
+  return 0;
+}
+
+
+Determining if the function qsort_s exists failed with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-WBsvtg
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_38624/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_38624.dir/build.make CMakeFiles/cmTC_38624.dir/build
+Building C object CMakeFiles/cmTC_38624.dir/CheckFunctionExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat -Wformat-security -DCHECK_FUNCTION_EXISTS=qsort_s -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -MD -MT CMakeFiles/cmTC_38624.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_38624.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_38624.dir/CheckFunctionExists.c.o -c /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-WBsvtg/CheckFunctionExists.c
+Linking C executable cmTC_38624
+/usr/local/Cellar/cmake/3.25.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_38624.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat -Wformat-security -DCHECK_FUNCTION_EXISTS=qsort_s -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_38624.dir/CheckFunctionExists.c.o -o cmTC_38624 
+Undefined symbols for architecture x86_64:
+  "_qsort_s", referenced from:
+      _main in CheckFunctionExists.c.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [cmTC_38624] Error 1
+make: *** [cmTC_38624/fast] Error 2
+
+
+
+Determining if the function clock_gettime exists in the rt failed with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-9JCALM
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_32aca/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_32aca.dir/build.make CMakeFiles/cmTC_32aca.dir/build
+Building C object CMakeFiles/cmTC_32aca.dir/CheckFunctionExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat -Wformat-security -DCHECK_FUNCTION_EXISTS=clock_gettime -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -MD -MT CMakeFiles/cmTC_32aca.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_32aca.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_32aca.dir/CheckFunctionExists.c.o -c /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-9JCALM/CheckFunctionExists.c
+Linking C executable cmTC_32aca
+/usr/local/Cellar/cmake/3.25.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_32aca.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat -Wformat-security -DCHECK_FUNCTION_EXISTS=clock_gettime -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_32aca.dir/CheckFunctionExists.c.o -o cmTC_32aca   -L/Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-9JCALM/time.h  -Wl,-rpath,/Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-9JCALM/time.h -lrt 
+ld: warning: directory not found for option '-L/Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-9JCALM/time.h'
+ld: library not found for -lrt
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [cmTC_32aca] Error 1
+make: *** [cmTC_32aca/fast] Error 2
+
+
+
+Determining if the function iconv_open exists failed with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-ujVodo
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_ea543/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_ea543.dir/build.make CMakeFiles/cmTC_ea543.dir/build
+Building C object CMakeFiles/cmTC_ea543.dir/CheckFunctionExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat -Wformat-security -DCHECK_FUNCTION_EXISTS=iconv_open -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -MD -MT CMakeFiles/cmTC_ea543.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_ea543.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_ea543.dir/CheckFunctionExists.c.o -c /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-ujVodo/CheckFunctionExists.c
+Linking C executable cmTC_ea543
+/usr/local/Cellar/cmake/3.25.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ea543.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat -Wformat-security -DCHECK_FUNCTION_EXISTS=iconv_open -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_ea543.dir/CheckFunctionExists.c.o -o cmTC_ea543 
+Undefined symbols for architecture x86_64:
+  "_iconv_open", referenced from:
+      _main in CheckFunctionExists.c.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [cmTC_ea543] Error 1
+make: *** [cmTC_ea543/fast] Error 2
+
+
+

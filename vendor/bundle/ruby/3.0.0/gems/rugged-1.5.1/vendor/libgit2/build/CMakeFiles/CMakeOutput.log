@@ -1,0 +1,781 @@
+The system is: Darwin - 20.6.0 - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /Library/Developer/CommandLineTools/usr/bin/cc 
+Build flags: -fPIC
+Id flags: -c 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+
+The C compiler identification is AppleClang, found in "/Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/3.25.2/CompilerIdC/CMakeCCompilerId.o"
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-2dMe1X
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_6abfb/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_6abfb.dir/build.make CMakeFiles/cmTC_6abfb.dir/build
+Building C object CMakeFiles/cmTC_6abfb.dir/CMakeCCompilerABI.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -fPIC  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7   -v -Wl,-v -MD -MT CMakeFiles/cmTC_6abfb.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_6abfb.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_6abfb.dir/CMakeCCompilerABI.c.o -c /usr/local/Cellar/cmake/3.25.2/share/cmake/Modules/CMakeCCompilerABI.c
+Apple clang version 13.0.0 (clang-1300.0.29.30)
+Target: x86_64-apple-darwin20.6.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+clang: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
+ "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1 -triple x86_64-apple-macosx11.7.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all --mrelax-relocations -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=all -fno-strict-return -fno-rounding-math -munwind-tables -target-sdk-version=12.1 -fvisibility-inlines-hidden-static-local-var -target-cpu penryn -tune-cpu generic -debugger-tuning=lldb -target-linker-version 711 -v -resource-dir /Library/Developer/CommandLineTools/usr/lib/clang/13.0.0 -dependency-file CMakeFiles/cmTC_6abfb.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_6abfb.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include -internal-externc-isystem /Library/Developer/CommandLineTools/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -fdebug-compilation-dir /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-2dMe1X -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fmax-type-align=16 -fcommon -clang-vendor-feature=+nullptrToBoolConversion -clang-vendor-feature=+messageToSelfInClassMethodIdReturnType -clang-vendor-feature=+disableInferNewAvailabilityFromInit -clang-vendor-feature=+disableNeonImmediateRangeCheck -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+revert09abecef7bbf -mllvm -disable-aligned-alloc-awareness=1 -mllvm -enable-dse-memoryssa=0 -o CMakeFiles/cmTC_6abfb.dir/CMakeCCompilerABI.c.o -x c /usr/local/Cellar/cmake/3.25.2/share/cmake/Modules/CMakeCCompilerABI.c
+clang -cc1 version 13.0.0 (clang-1300.0.29.30) default target x86_64-apple-darwin20.6.0
+ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/local/include"
+ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/Library/Frameworks"
+#include "..." search starts here:
+#include <...> search starts here:
+ /Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include
+ /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include
+ /Library/Developer/CommandLineTools/usr/include
+ /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/System/Library/Frameworks (framework directory)
+End of search list.
+Linking C executable cmTC_6abfb
+/usr/local/Cellar/cmake/3.25.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6abfb.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fPIC  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_6abfb.dir/CMakeCCompilerABI.c.o -o cmTC_6abfb 
+Apple clang version 13.0.0 (clang-1300.0.29.30)
+Target: x86_64-apple-darwin20.6.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch x86_64 -platform_version macos 11.7.0 12.1 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -o cmTC_6abfb -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_6abfb.dir/CMakeCCompilerABI.c.o -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/lib/darwin/libclang_rt.osx.a
+@(#)PROGRAM:ld  PROJECT:ld64-711
+BUILD 21:57:11 Nov 17 2021
+configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+Library search paths:
+	/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/lib
+Framework search paths:
+	/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/
+
+
+
+Parsed C implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include]
+    add: [/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include]
+    add: [/Library/Developer/CommandLineTools/usr/include]
+  end of search list found
+  collapse include dir [/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include] ==> [/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include]
+  collapse include dir [/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include]
+  collapse include dir [/Library/Developer/CommandLineTools/usr/include] ==> [/Library/Developer/CommandLineTools/usr/include]
+  implicit include dirs: [/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include;/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include;/Library/Developer/CommandLineTools/usr/include]
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-2dMe1X]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/make -f Makefile cmTC_6abfb/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_6abfb.dir/build.make CMakeFiles/cmTC_6abfb.dir/build]
+  ignore line: [Building C object CMakeFiles/cmTC_6abfb.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/Library/Developer/CommandLineTools/usr/bin/cc   -fPIC  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7   -v -Wl -v -MD -MT CMakeFiles/cmTC_6abfb.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_6abfb.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_6abfb.dir/CMakeCCompilerABI.c.o -c /usr/local/Cellar/cmake/3.25.2/share/cmake/Modules/CMakeCCompilerABI.c]
+  ignore line: [Apple clang version 13.0.0 (clang-1300.0.29.30)]
+  ignore line: [Target: x86_64-apple-darwin20.6.0]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /Library/Developer/CommandLineTools/usr/bin]
+  ignore line: [clang: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
+  ignore line: [ "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1 -triple x86_64-apple-macosx11.7.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all --mrelax-relocations -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=all -fno-strict-return -fno-rounding-math -munwind-tables -target-sdk-version=12.1 -fvisibility-inlines-hidden-static-local-var -target-cpu penryn -tune-cpu generic -debugger-tuning=lldb -target-linker-version 711 -v -resource-dir /Library/Developer/CommandLineTools/usr/lib/clang/13.0.0 -dependency-file CMakeFiles/cmTC_6abfb.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_6abfb.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include -internal-externc-isystem /Library/Developer/CommandLineTools/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -fdebug-compilation-dir /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-2dMe1X -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fmax-type-align=16 -fcommon -clang-vendor-feature=+nullptrToBoolConversion -clang-vendor-feature=+messageToSelfInClassMethodIdReturnType -clang-vendor-feature=+disableInferNewAvailabilityFromInit -clang-vendor-feature=+disableNeonImmediateRangeCheck -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+revert09abecef7bbf -mllvm -disable-aligned-alloc-awareness=1 -mllvm -enable-dse-memoryssa=0 -o CMakeFiles/cmTC_6abfb.dir/CMakeCCompilerABI.c.o -x c /usr/local/Cellar/cmake/3.25.2/share/cmake/Modules/CMakeCCompilerABI.c]
+  ignore line: [clang -cc1 version 13.0.0 (clang-1300.0.29.30) default target x86_64-apple-darwin20.6.0]
+  ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/local/include"]
+  ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/Library/Frameworks"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include]
+  ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include]
+  ignore line: [ /Library/Developer/CommandLineTools/usr/include]
+  ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/System/Library/Frameworks (framework directory)]
+  ignore line: [End of search list.]
+  ignore line: [Linking C executable cmTC_6abfb]
+  ignore line: [/usr/local/Cellar/cmake/3.25.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6abfb.dir/link.txt --verbose=1]
+  ignore line: [/Library/Developer/CommandLineTools/usr/bin/cc -fPIC  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -Wl -search_paths_first -Wl -headerpad_max_install_names  -v -Wl -v CMakeFiles/cmTC_6abfb.dir/CMakeCCompilerABI.c.o -o cmTC_6abfb ]
+  ignore line: [Apple clang version 13.0.0 (clang-1300.0.29.30)]
+  ignore line: [Target: x86_64-apple-darwin20.6.0]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /Library/Developer/CommandLineTools/usr/bin]
+  link line: [ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch x86_64 -platform_version macos 11.7.0 12.1 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -o cmTC_6abfb -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_6abfb.dir/CMakeCCompilerABI.c.o -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/lib/darwin/libclang_rt.osx.a]
+    arg [/Library/Developer/CommandLineTools/usr/bin/ld] ==> ignore
+    arg [-demangle] ==> ignore
+    arg [-lto_library] ==> ignore, skip following value
+    arg [/Library/Developer/CommandLineTools/usr/lib/libLTO.dylib] ==> skip value of -lto_library
+    arg [-dynamic] ==> ignore
+    arg [-arch] ==> ignore
+    arg [x86_64] ==> ignore
+    arg [-platform_version] ==> ignore
+    arg [macos] ==> ignore
+    arg [11.7.0] ==> ignore
+    arg [12.1] ==> ignore
+    arg [-syslibroot] ==> ignore
+    arg [/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_6abfb] ==> ignore
+    arg [-search_paths_first] ==> ignore
+    arg [-headerpad_max_install_names] ==> ignore
+    arg [-v] ==> ignore
+    arg [CMakeFiles/cmTC_6abfb.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lSystem] ==> lib [System]
+    arg [/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/lib/darwin/libclang_rt.osx.a] ==> lib [/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/lib/darwin/libclang_rt.osx.a]
+  Library search paths: [;/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/lib]
+  Framework search paths: [;/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/]
+  remove lib [System]
+  remove lib [/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/lib/darwin/libclang_rt.osx.a]
+  collapse library dir [/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/lib] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/lib]
+  collapse framework dir [/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/System/Library/Frameworks]
+  implicit libs: []
+  implicit objs: []
+  implicit dirs: [/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/lib]
+  implicit fwks: [/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/System/Library/Frameworks]
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD succeeded with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-Y5nmIE
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_147cc/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_147cc.dir/build.make CMakeFiles/cmTC_147cc.dir/build
+Building C object CMakeFiles/cmTC_147cc.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -MD -MT CMakeFiles/cmTC_147cc.dir/src.c.o -MF CMakeFiles/cmTC_147cc.dir/src.c.o.d -o CMakeFiles/cmTC_147cc.dir/src.c.o -c /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-Y5nmIE/src.c
+Linking C executable cmTC_147cc
+/usr/local/Cellar/cmake/3.25.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_147cc.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fPIC  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_147cc.dir/src.c.o -o cmTC_147cc 
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+
+Performing C SOURCE FILE Test HAVE_STRUCT_STAT_ST_MTIMESPEC succeeded with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-mucrLJ
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_a5c0d/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_a5c0d.dir/build.make CMakeFiles/cmTC_a5c0d.dir/build
+Building C object CMakeFiles/cmTC_a5c0d.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DHAVE_STRUCT_STAT_ST_MTIMESPEC  -fPIC  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -MD -MT CMakeFiles/cmTC_a5c0d.dir/src.c.o -MF CMakeFiles/cmTC_a5c0d.dir/src.c.o.d -o CMakeFiles/cmTC_a5c0d.dir/src.c.o -c /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-mucrLJ/src.c
+Linking C executable cmTC_a5c0d
+/usr/local/Cellar/cmake/3.25.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a5c0d.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fPIC  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_a5c0d.dir/src.c.o -o cmTC_a5c0d 
+
+
+Source file was:
+
+#include <sys/types.h>
+#include <sys/stat.h>
+
+int main()
+{
+  (void)sizeof(((struct stat *)0)->st_mtimespec);
+  return 0;
+}
+
+
+Performing C SOURCE FILE Test HAVE_STRUCT_STAT_NSEC succeeded with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-mnNkc9
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_01b94/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_01b94.dir/build.make CMakeFiles/cmTC_01b94.dir/build
+Building C object CMakeFiles/cmTC_01b94.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DHAVE_STRUCT_STAT_NSEC  -fPIC  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -MD -MT CMakeFiles/cmTC_01b94.dir/src.c.o -MF CMakeFiles/cmTC_01b94.dir/src.c.o.d -o CMakeFiles/cmTC_01b94.dir/src.c.o -c /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-mnNkc9/src.c
+Linking C executable cmTC_01b94
+/usr/local/Cellar/cmake/3.25.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_01b94.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fPIC  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_01b94.dir/src.c.o -o cmTC_01b94 
+
+
+Source file was:
+
+#include <sys/stat.h>
+
+int main()
+{
+  (void)sizeof(((struct stat *)0)->st_mtimespec.tv_nsec);
+  return 0;
+}
+
+
+Performing C SOURCE FILE Test IS_WERROR_SUPPORTED succeeded with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-Mj6aPm
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_a8405/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_a8405.dir/build.make CMakeFiles/cmTC_a8405.dir/build
+Building C object CMakeFiles/cmTC_a8405.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DIS_WERROR_SUPPORTED  -fPIC  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7   -Werror -MD -MT CMakeFiles/cmTC_a8405.dir/src.c.o -MF CMakeFiles/cmTC_a8405.dir/src.c.o.d -o CMakeFiles/cmTC_a8405.dir/src.c.o -c /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-Mj6aPm/src.c
+Linking C executable cmTC_a8405
+/usr/local/Cellar/cmake/3.25.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a8405.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fPIC  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_a8405.dir/src.c.o -o cmTC_a8405 
+
+
+Source file was:
+int main(void) { return 0; }
+
+Determining if the futimens exist passed with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-QBHoQO
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_b6cd2/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_b6cd2.dir/build.make CMakeFiles/cmTC_b6cd2.dir/build
+Building C object CMakeFiles/cmTC_b6cd2.dir/CheckSymbolExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -fPIC   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -MD -MT CMakeFiles/cmTC_b6cd2.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_b6cd2.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_b6cd2.dir/CheckSymbolExists.c.o -c /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-QBHoQO/CheckSymbolExists.c
+Linking C executable cmTC_b6cd2
+/usr/local/Cellar/cmake/3.25.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b6cd2.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fPIC   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_b6cd2.dir/CheckSymbolExists.c.o -o cmTC_b6cd2 
+
+
+File CheckSymbolExists.c:
+/* */
+#include <sys/stat.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef futimens
+  return ((int*)(&futimens))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Performing C SOURCE FILE Test IS_WNO_ERROR_SUPPORTED succeeded with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-oMP1Ss
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_16a77/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_16a77.dir/build.make CMakeFiles/cmTC_16a77.dir/build
+Building C object CMakeFiles/cmTC_16a77.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DIS_WNO_ERROR_SUPPORTED  -fPIC -Werror  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7   -Wno-error -MD -MT CMakeFiles/cmTC_16a77.dir/src.c.o -MF CMakeFiles/cmTC_16a77.dir/src.c.o.d -o CMakeFiles/cmTC_16a77.dir/src.c.o -c /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-oMP1Ss/src.c
+Linking C executable cmTC_16a77
+/usr/local/Cellar/cmake/3.25.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_16a77.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -fPIC -Werror  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_16a77.dir/src.c.o -o cmTC_16a77 
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test IS_WALL_SUPPORTED succeeded with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-AR29On
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_e6fba/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_e6fba.dir/build.make CMakeFiles/cmTC_e6fba.dir/build
+Building C object CMakeFiles/cmTC_e6fba.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DIS_WALL_SUPPORTED  -D_GNU_SOURCE -fPIC -Werror -Wno-error  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7   -Wall -MD -MT CMakeFiles/cmTC_e6fba.dir/src.c.o -MF CMakeFiles/cmTC_e6fba.dir/src.c.o.d -o CMakeFiles/cmTC_e6fba.dir/src.c.o -c /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-AR29On/src.c
+Linking C executable cmTC_e6fba
+/usr/local/Cellar/cmake/3.25.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e6fba.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -D_GNU_SOURCE -fPIC -Werror -Wno-error  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_e6fba.dir/src.c.o -o cmTC_e6fba 
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test IS_WEXTRA_SUPPORTED succeeded with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-jZLqhE
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_20a6e/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_20a6e.dir/build.make CMakeFiles/cmTC_20a6e.dir/build
+Building C object CMakeFiles/cmTC_20a6e.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DIS_WEXTRA_SUPPORTED  -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7   -Wextra -MD -MT CMakeFiles/cmTC_20a6e.dir/src.c.o -MF CMakeFiles/cmTC_20a6e.dir/src.c.o.d -o CMakeFiles/cmTC_20a6e.dir/src.c.o -c /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-jZLqhE/src.c
+Linking C executable cmTC_20a6e
+/usr/local/Cellar/cmake/3.25.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_20a6e.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_20a6e.dir/src.c.o -o cmTC_20a6e 
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test IS_WDOCUMENTATION_SUPPORTED succeeded with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-qLOu5e
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_3b696/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_3b696.dir/build.make CMakeFiles/cmTC_3b696.dir/build
+Building C object CMakeFiles/cmTC_3b696.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DIS_WDOCUMENTATION_SUPPORTED  -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7   -Wdocumentation -MD -MT CMakeFiles/cmTC_3b696.dir/src.c.o -MF CMakeFiles/cmTC_3b696.dir/src.c.o.d -o CMakeFiles/cmTC_3b696.dir/src.c.o -c /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-qLOu5e/src.c
+Linking C executable cmTC_3b696
+/usr/local/Cellar/cmake/3.25.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3b696.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_3b696.dir/src.c.o -o cmTC_3b696 
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test IS_WNO_DOCUMENTATION_DEPRECATED_SYNC_SUPPORTED succeeded with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-jUn99C
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_cfdcc/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_cfdcc.dir/build.make CMakeFiles/cmTC_cfdcc.dir/build
+Building C object CMakeFiles/cmTC_cfdcc.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DIS_WNO_DOCUMENTATION_DEPRECATED_SYNC_SUPPORTED  -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7   -Wno-documentation-deprecated-sync -MD -MT CMakeFiles/cmTC_cfdcc.dir/src.c.o -MF CMakeFiles/cmTC_cfdcc.dir/src.c.o.d -o CMakeFiles/cmTC_cfdcc.dir/src.c.o -c /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-jUn99C/src.c
+Linking C executable cmTC_cfdcc
+/usr/local/Cellar/cmake/3.25.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cfdcc.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_cfdcc.dir/src.c.o -o cmTC_cfdcc 
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test IS_WNO_MISSING_FIELD_INITIALIZERS_SUPPORTED succeeded with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-f3CTOh
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_b6b38/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_b6b38.dir/build.make CMakeFiles/cmTC_b6b38.dir/build
+Building C object CMakeFiles/cmTC_b6b38.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DIS_WNO_MISSING_FIELD_INITIALIZERS_SUPPORTED  -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7   -Wno-missing-field-initializers -MD -MT CMakeFiles/cmTC_b6b38.dir/src.c.o -MF CMakeFiles/cmTC_b6b38.dir/src.c.o.d -o CMakeFiles/cmTC_b6b38.dir/src.c.o -c /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-f3CTOh/src.c
+Linking C executable cmTC_b6b38
+/usr/local/Cellar/cmake/3.25.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b6b38.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_b6b38.dir/src.c.o -o cmTC_b6b38 
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test IS_WMISSING_DECLARATIONS_SUPPORTED succeeded with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-lLLOLb
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_19988/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_19988.dir/build.make CMakeFiles/cmTC_19988.dir/build
+Building C object CMakeFiles/cmTC_19988.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DIS_WMISSING_DECLARATIONS_SUPPORTED  -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7   -Wmissing-declarations -MD -MT CMakeFiles/cmTC_19988.dir/src.c.o -MF CMakeFiles/cmTC_19988.dir/src.c.o.d -o CMakeFiles/cmTC_19988.dir/src.c.o -c /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-lLLOLb/src.c
+Linking C executable cmTC_19988
+/usr/local/Cellar/cmake/3.25.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_19988.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_19988.dir/src.c.o -o cmTC_19988 
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test IS_WSTRICT_ALIASING_SUPPORTED succeeded with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-3Shdyc
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_0cc72/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_0cc72.dir/build.make CMakeFiles/cmTC_0cc72.dir/build
+Building C object CMakeFiles/cmTC_0cc72.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DIS_WSTRICT_ALIASING_SUPPORTED  -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7   -Wstrict-aliasing -MD -MT CMakeFiles/cmTC_0cc72.dir/src.c.o -MF CMakeFiles/cmTC_0cc72.dir/src.c.o.d -o CMakeFiles/cmTC_0cc72.dir/src.c.o -c /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-3Shdyc/src.c
+Linking C executable cmTC_0cc72
+/usr/local/Cellar/cmake/3.25.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0cc72.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_0cc72.dir/src.c.o -o cmTC_0cc72 
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test IS_WSTRICT_PROTOTYPES_SUPPORTED succeeded with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-WV3tqJ
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_fe32f/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_fe32f.dir/build.make CMakeFiles/cmTC_fe32f.dir/build
+Building C object CMakeFiles/cmTC_fe32f.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DIS_WSTRICT_PROTOTYPES_SUPPORTED  -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7   -Wstrict-prototypes -MD -MT CMakeFiles/cmTC_fe32f.dir/src.c.o -MF CMakeFiles/cmTC_fe32f.dir/src.c.o.d -o CMakeFiles/cmTC_fe32f.dir/src.c.o -c /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-WV3tqJ/src.c
+Linking C executable cmTC_fe32f
+/usr/local/Cellar/cmake/3.25.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fe32f.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_fe32f.dir/src.c.o -o cmTC_fe32f 
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test IS_WDECLARATION_AFTER_STATEMENT_SUPPORTED succeeded with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-ZAWqKR
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_397b7/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_397b7.dir/build.make CMakeFiles/cmTC_397b7.dir/build
+Building C object CMakeFiles/cmTC_397b7.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DIS_WDECLARATION_AFTER_STATEMENT_SUPPORTED  -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7   -Wdeclaration-after-statement -MD -MT CMakeFiles/cmTC_397b7.dir/src.c.o -MF CMakeFiles/cmTC_397b7.dir/src.c.o.d -o CMakeFiles/cmTC_397b7.dir/src.c.o -c /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-ZAWqKR/src.c
+Linking C executable cmTC_397b7
+/usr/local/Cellar/cmake/3.25.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_397b7.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_397b7.dir/src.c.o -o cmTC_397b7 
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test IS_WSHIFT_COUNT_OVERFLOW_SUPPORTED succeeded with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-5CtkA4
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_45a6f/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_45a6f.dir/build.make CMakeFiles/cmTC_45a6f.dir/build
+Building C object CMakeFiles/cmTC_45a6f.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DIS_WSHIFT_COUNT_OVERFLOW_SUPPORTED  -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7   -Wshift-count-overflow -MD -MT CMakeFiles/cmTC_45a6f.dir/src.c.o -MF CMakeFiles/cmTC_45a6f.dir/src.c.o.d -o CMakeFiles/cmTC_45a6f.dir/src.c.o -c /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-5CtkA4/src.c
+Linking C executable cmTC_45a6f
+/usr/local/Cellar/cmake/3.25.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_45a6f.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_45a6f.dir/src.c.o -o cmTC_45a6f 
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test IS_WUNUSED_CONST_VARIABLE_SUPPORTED succeeded with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-BnoB0z
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_f2105/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_f2105.dir/build.make CMakeFiles/cmTC_f2105.dir/build
+Building C object CMakeFiles/cmTC_f2105.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DIS_WUNUSED_CONST_VARIABLE_SUPPORTED  -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7   -Wunused-const-variable -MD -MT CMakeFiles/cmTC_f2105.dir/src.c.o -MF CMakeFiles/cmTC_f2105.dir/src.c.o.d -o CMakeFiles/cmTC_f2105.dir/src.c.o -c /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-BnoB0z/src.c
+Linking C executable cmTC_f2105
+/usr/local/Cellar/cmake/3.25.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f2105.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_f2105.dir/src.c.o -o cmTC_f2105 
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test IS_WUNUSED_FUNCTION_SUPPORTED succeeded with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-aFR7Di
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_7a8e1/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_7a8e1.dir/build.make CMakeFiles/cmTC_7a8e1.dir/build
+Building C object CMakeFiles/cmTC_7a8e1.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DIS_WUNUSED_FUNCTION_SUPPORTED  -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7   -Wunused-function -MD -MT CMakeFiles/cmTC_7a8e1.dir/src.c.o -MF CMakeFiles/cmTC_7a8e1.dir/src.c.o.d -o CMakeFiles/cmTC_7a8e1.dir/src.c.o -c /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-aFR7Di/src.c
+Linking C executable cmTC_7a8e1
+/usr/local/Cellar/cmake/3.25.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7a8e1.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_7a8e1.dir/src.c.o -o cmTC_7a8e1 
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test IS_WINT_CONVERSION_SUPPORTED succeeded with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-oZLboN
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_4382c/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_4382c.dir/build.make CMakeFiles/cmTC_4382c.dir/build
+Building C object CMakeFiles/cmTC_4382c.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DIS_WINT_CONVERSION_SUPPORTED  -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7   -Wint-conversion -MD -MT CMakeFiles/cmTC_4382c.dir/src.c.o -MF CMakeFiles/cmTC_4382c.dir/src.c.o.d -o CMakeFiles/cmTC_4382c.dir/src.c.o -c /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-oZLboN/src.c
+Linking C executable cmTC_4382c
+/usr/local/Cellar/cmake/3.25.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4382c.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_4382c.dir/src.c.o -o cmTC_4382c 
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test IS_WC11_EXTENSIONS_SUPPORTED succeeded with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-TmH8r9
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_8ad45/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_8ad45.dir/build.make CMakeFiles/cmTC_8ad45.dir/build
+Building C object CMakeFiles/cmTC_8ad45.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DIS_WC11_EXTENSIONS_SUPPORTED  -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7   -Wc11-extensions -MD -MT CMakeFiles/cmTC_8ad45.dir/src.c.o -MF CMakeFiles/cmTC_8ad45.dir/src.c.o.d -o CMakeFiles/cmTC_8ad45.dir/src.c.o -c /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-TmH8r9/src.c
+Linking C executable cmTC_8ad45
+/usr/local/Cellar/cmake/3.25.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8ad45.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_8ad45.dir/src.c.o -o cmTC_8ad45 
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test IS_WFORMAT_SUPPORTED succeeded with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-WSktmn
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_5026c/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_5026c.dir/build.make CMakeFiles/cmTC_5026c.dir/build
+Building C object CMakeFiles/cmTC_5026c.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DIS_WFORMAT_SUPPORTED  -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7   -Wformat -MD -MT CMakeFiles/cmTC_5026c.dir/src.c.o -MF CMakeFiles/cmTC_5026c.dir/src.c.o.d -o CMakeFiles/cmTC_5026c.dir/src.c.o -c /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-WSktmn/src.c
+Linking C executable cmTC_5026c
+/usr/local/Cellar/cmake/3.25.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5026c.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_5026c.dir/src.c.o -o cmTC_5026c 
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test IS_WFORMAT_SECURITY_SUPPORTED succeeded with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-daj792
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_23060/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_23060.dir/build.make CMakeFiles/cmTC_23060.dir/build
+Building C object CMakeFiles/cmTC_23060.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DIS_WFORMAT_SECURITY_SUPPORTED  -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7   -Wformat-security -MD -MT CMakeFiles/cmTC_23060.dir/src.c.o -MF CMakeFiles/cmTC_23060.dir/src.c.o.d -o CMakeFiles/cmTC_23060.dir/src.c.o -c /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-daj792/src.c
+Linking C executable cmTC_23060
+/usr/local/Cellar/cmake/3.25.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_23060.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_23060.dir/src.c.o -o cmTC_23060 
+
+
+Source file was:
+int main(void) { return 0; }
+
+Determining if the function SSLCreateContext exists in the /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/Security.framework passed with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-YV526d
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_eec61/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_eec61.dir/build.make CMakeFiles/cmTC_eec61.dir/build
+Building C object CMakeFiles/cmTC_eec61.dir/CheckFunctionExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat -Wformat-security -DCHECK_FUNCTION_EXISTS=SSLCreateContext -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -MD -MT CMakeFiles/cmTC_eec61.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_eec61.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_eec61.dir/CheckFunctionExists.c.o -c /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-YV526d/CheckFunctionExists.c
+Linking C executable cmTC_eec61
+/usr/local/Cellar/cmake/3.25.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eec61.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat -Wformat-security -DCHECK_FUNCTION_EXISTS=SSLCreateContext -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_eec61.dir/CheckFunctionExists.c.o -o cmTC_eec61   -L/Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-YV526d/Security/SecureTransport.h  -Wl,-rpath,/Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-YV526d/Security/SecureTransport.h -Xlinker -framework -Xlinker Security 
+ld: warning: directory not found for option '-L/Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-YV526d/Security/SecureTransport.h'
+
+
+
+Determining if the include file dirent.h exists passed with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-iLypXa
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_96df8/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_96df8.dir/build.make CMakeFiles/cmTC_96df8.dir/build
+Building C object CMakeFiles/cmTC_96df8.dir/CheckIncludeFile.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat -Wformat-security  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -MD -MT CMakeFiles/cmTC_96df8.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_96df8.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_96df8.dir/CheckIncludeFile.c.o -c /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-iLypXa/CheckIncludeFile.c
+Linking C executable cmTC_96df8
+/usr/local/Cellar/cmake/3.25.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_96df8.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat -Wformat-security  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_96df8.dir/CheckIncludeFile.c.o -o cmTC_96df8 
+
+
+
+Determining if the include file stdint.h exists passed with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-Eu8fCg
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_69520/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_69520.dir/build.make CMakeFiles/cmTC_69520.dir/build
+Building C object CMakeFiles/cmTC_69520.dir/CheckIncludeFile.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat -Wformat-security  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -MD -MT CMakeFiles/cmTC_69520.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_69520.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_69520.dir/CheckIncludeFile.c.o -c /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-Eu8fCg/CheckIncludeFile.c
+Linking C executable cmTC_69520
+/usr/local/Cellar/cmake/3.25.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_69520.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat -Wformat-security  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_69520.dir/CheckIncludeFile.c.o -o cmTC_69520 
+
+
+
+Determining if the include file inttypes.h exists passed with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-a3JU2p
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_7331e/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_7331e.dir/build.make CMakeFiles/cmTC_7331e.dir/build
+Building C object CMakeFiles/cmTC_7331e.dir/CheckIncludeFile.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat -Wformat-security  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -MD -MT CMakeFiles/cmTC_7331e.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_7331e.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_7331e.dir/CheckIncludeFile.c.o -c /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-a3JU2p/CheckIncludeFile.c
+Linking C executable cmTC_7331e
+/usr/local/Cellar/cmake/3.25.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7331e.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat -Wformat-security  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_7331e.dir/CheckIncludeFile.c.o -o cmTC_7331e 
+
+
+
+Determining if the include file sys/stat.h exists passed with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-xBPXdD
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_6e391/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_6e391.dir/build.make CMakeFiles/cmTC_6e391.dir/build
+Building C object CMakeFiles/cmTC_6e391.dir/CheckIncludeFile.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat -Wformat-security  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -MD -MT CMakeFiles/cmTC_6e391.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_6e391.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_6e391.dir/CheckIncludeFile.c.o -c /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-xBPXdD/CheckIncludeFile.c
+Linking C executable cmTC_6e391
+/usr/local/Cellar/cmake/3.25.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6e391.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat -Wformat-security  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_6e391.dir/CheckIncludeFile.c.o -o cmTC_6e391 
+
+
+
+Determining if the include file sys/types.h exists passed with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-KgvCBM
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_d5f99/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_d5f99.dir/build.make CMakeFiles/cmTC_d5f99.dir/build
+Building C object CMakeFiles/cmTC_d5f99.dir/CheckIncludeFile.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat -Wformat-security  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -MD -MT CMakeFiles/cmTC_d5f99.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_d5f99.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_d5f99.dir/CheckIncludeFile.c.o -c /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-KgvCBM/CheckIncludeFile.c
+Linking C executable cmTC_d5f99
+/usr/local/Cellar/cmake/3.25.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d5f99.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat -Wformat-security  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_d5f99.dir/CheckIncludeFile.c.o -o cmTC_d5f99 
+
+
+
+Determining if the include file unistd.h exists passed with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-pPvJ7E
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_d697c/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_d697c.dir/build.make CMakeFiles/cmTC_d697c.dir/build
+Building C object CMakeFiles/cmTC_d697c.dir/CheckIncludeFile.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat -Wformat-security  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -MD -MT CMakeFiles/cmTC_d697c.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_d697c.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_d697c.dir/CheckIncludeFile.c.o -c /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-pPvJ7E/CheckIncludeFile.c
+Linking C executable cmTC_d697c
+/usr/local/Cellar/cmake/3.25.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d697c.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat -Wformat-security  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_d697c.dir/CheckIncludeFile.c.o -o cmTC_d697c 
+
+
+
+Determining if the function bcopy exists passed with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-LCRwDt
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_2390d/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_2390d.dir/build.make CMakeFiles/cmTC_2390d.dir/build
+Building C object CMakeFiles/cmTC_2390d.dir/CheckFunctionExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat -Wformat-security -DCHECK_FUNCTION_EXISTS=bcopy -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -MD -MT CMakeFiles/cmTC_2390d.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_2390d.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_2390d.dir/CheckFunctionExists.c.o -c /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-LCRwDt/CheckFunctionExists.c
+Linking C executable cmTC_2390d
+/usr/local/Cellar/cmake/3.25.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2390d.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat -Wformat-security -DCHECK_FUNCTION_EXISTS=bcopy -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_2390d.dir/CheckFunctionExists.c.o -o cmTC_2390d 
+
+
+
+Determining if the function memmove exists passed with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-HjE3Qq
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_85f37/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_85f37.dir/build.make CMakeFiles/cmTC_85f37.dir/build
+Building C object CMakeFiles/cmTC_85f37.dir/CheckFunctionExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat -Wformat-security -DCHECK_FUNCTION_EXISTS=memmove -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -MD -MT CMakeFiles/cmTC_85f37.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_85f37.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_85f37.dir/CheckFunctionExists.c.o -c /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-HjE3Qq/CheckFunctionExists.c
+/Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-HjE3Qq/CheckFunctionExists.c:7:3: warning: incompatible redeclaration of library function 'memmove' [-Wincompatible-library-redeclaration]
+  CHECK_FUNCTION_EXISTS(void);
+  ^
+<command line>:2:31: note: expanded from here
+#define CHECK_FUNCTION_EXISTS memmove
+                              ^
+/Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-HjE3Qq/CheckFunctionExists.c:7:3: note: 'memmove' is a builtin with type 'void *(void *, const void *, unsigned long)'
+<command line>:2:31: note: expanded from here
+#define CHECK_FUNCTION_EXISTS memmove
+                              ^
+1 warning generated.
+Linking C executable cmTC_85f37
+/usr/local/Cellar/cmake/3.25.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_85f37.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat -Wformat-security -DCHECK_FUNCTION_EXISTS=memmove -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_85f37.dir/CheckFunctionExists.c.o -o cmTC_85f37 
+
+
+
+Determining if the function strerror exists passed with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-pQxxML
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_aa3ce/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_aa3ce.dir/build.make CMakeFiles/cmTC_aa3ce.dir/build
+Building C object CMakeFiles/cmTC_aa3ce.dir/CheckFunctionExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat -Wformat-security -DCHECK_FUNCTION_EXISTS=strerror -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -MD -MT CMakeFiles/cmTC_aa3ce.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_aa3ce.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_aa3ce.dir/CheckFunctionExists.c.o -c /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-pQxxML/CheckFunctionExists.c
+/Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-pQxxML/CheckFunctionExists.c:7:3: warning: incompatible redeclaration of library function 'strerror' [-Wincompatible-library-redeclaration]
+  CHECK_FUNCTION_EXISTS(void);
+  ^
+<command line>:2:31: note: expanded from here
+#define CHECK_FUNCTION_EXISTS strerror
+                              ^
+/Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-pQxxML/CheckFunctionExists.c:7:3: note: 'strerror' is a builtin with type 'char *(int)'
+<command line>:2:31: note: expanded from here
+#define CHECK_FUNCTION_EXISTS strerror
+                              ^
+1 warning generated.
+Linking C executable cmTC_aa3ce
+/usr/local/Cellar/cmake/3.25.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aa3ce.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat -Wformat-security -DCHECK_FUNCTION_EXISTS=strerror -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_aa3ce.dir/CheckFunctionExists.c.o -o cmTC_aa3ce 
+
+
+
+Determining if the function strtoll exists passed with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-obyX9H
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_69670/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_69670.dir/build.make CMakeFiles/cmTC_69670.dir/build
+Building C object CMakeFiles/cmTC_69670.dir/CheckFunctionExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat -Wformat-security -DCHECK_FUNCTION_EXISTS=strtoll -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -MD -MT CMakeFiles/cmTC_69670.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_69670.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_69670.dir/CheckFunctionExists.c.o -c /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-obyX9H/CheckFunctionExists.c
+/Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-obyX9H/CheckFunctionExists.c:7:3: warning: incompatible redeclaration of library function 'strtoll' [-Wincompatible-library-redeclaration]
+  CHECK_FUNCTION_EXISTS(void);
+  ^
+<command line>:2:31: note: expanded from here
+#define CHECK_FUNCTION_EXISTS strtoll
+                              ^
+/Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-obyX9H/CheckFunctionExists.c:7:3: note: 'strtoll' is a builtin with type 'long long (const char *, char **, int)'
+<command line>:2:31: note: expanded from here
+#define CHECK_FUNCTION_EXISTS strtoll
+                              ^
+1 warning generated.
+Linking C executable cmTC_69670
+/usr/local/Cellar/cmake/3.25.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_69670.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat -Wformat-security -DCHECK_FUNCTION_EXISTS=strtoll -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_69670.dir/CheckFunctionExists.c.o -o cmTC_69670 
+
+
+
+Determining if the function strtoq exists passed with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-6tMtxo
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_c1b0e/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_c1b0e.dir/build.make CMakeFiles/cmTC_c1b0e.dir/build
+Building C object CMakeFiles/cmTC_c1b0e.dir/CheckFunctionExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat -Wformat-security -DCHECK_FUNCTION_EXISTS=strtoq -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -MD -MT CMakeFiles/cmTC_c1b0e.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_c1b0e.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_c1b0e.dir/CheckFunctionExists.c.o -c /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-6tMtxo/CheckFunctionExists.c
+Linking C executable cmTC_c1b0e
+/usr/local/Cellar/cmake/3.25.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c1b0e.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat -Wformat-security -DCHECK_FUNCTION_EXISTS=strtoq -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_c1b0e.dir/CheckFunctionExists.c.o -o cmTC_c1b0e 
+
+
+
+Determining if the include file stddef.h exists passed with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-Ox3gHZ
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_481e8/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_481e8.dir/build.make CMakeFiles/cmTC_481e8.dir/build
+Building C object CMakeFiles/cmTC_481e8.dir/CheckIncludeFile.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat -Wformat-security  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -MD -MT CMakeFiles/cmTC_481e8.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_481e8.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_481e8.dir/CheckIncludeFile.c.o -c /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-Ox3gHZ/CheckIncludeFile.c
+Linking C executable cmTC_481e8
+/usr/local/Cellar/cmake/3.25.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_481e8.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat -Wformat-security  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_481e8.dir/CheckIncludeFile.c.o -o cmTC_481e8 
+
+
+
+Determining size of long long passed with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-AVqHUQ
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_a4461/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_a4461.dir/build.make CMakeFiles/cmTC_a4461.dir/build
+Building C object CMakeFiles/cmTC_a4461.dir/LONG_LONG.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat -Wformat-security  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -MD -MT CMakeFiles/cmTC_a4461.dir/LONG_LONG.c.o -MF CMakeFiles/cmTC_a4461.dir/LONG_LONG.c.o.d -o CMakeFiles/cmTC_a4461.dir/LONG_LONG.c.o -c /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-AVqHUQ/LONG_LONG.c
+Linking C executable cmTC_a4461
+/usr/local/Cellar/cmake/3.25.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a4461.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat -Wformat-security  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_a4461.dir/LONG_LONG.c.o -o cmTC_a4461 
+
+
+
+Determining size of unsigned long long passed with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-dTwmWf
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_d76bf/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_d76bf.dir/build.make CMakeFiles/cmTC_d76bf.dir/build
+Building C object CMakeFiles/cmTC_d76bf.dir/UNSIGNED_LONG_LONG.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat -Wformat-security  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -MD -MT CMakeFiles/cmTC_d76bf.dir/UNSIGNED_LONG_LONG.c.o -MF CMakeFiles/cmTC_d76bf.dir/UNSIGNED_LONG_LONG.c.o.d -o CMakeFiles/cmTC_d76bf.dir/UNSIGNED_LONG_LONG.c.o -c /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-dTwmWf/UNSIGNED_LONG_LONG.c
+Linking C executable cmTC_d76bf
+/usr/local/Cellar/cmake/3.25.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d76bf.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat -Wformat-security  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_d76bf.dir/UNSIGNED_LONG_LONG.c.o -o cmTC_d76bf 
+
+
+
+Performing C SOURCE FILE Test IS_WNO_UNUSED_FUNCTION_SUPPORTED succeeded with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-gaAz2V
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_2ca5a/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_2ca5a.dir/build.make CMakeFiles/cmTC_2ca5a.dir/build
+Building C object CMakeFiles/cmTC_2ca5a.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DIS_WNO_UNUSED_FUNCTION_SUPPORTED  -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat -Wformat-security  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7   -Wno-unused-function -MD -MT CMakeFiles/cmTC_2ca5a.dir/src.c.o -MF CMakeFiles/cmTC_2ca5a.dir/src.c.o.d -o CMakeFiles/cmTC_2ca5a.dir/src.c.o -c /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-gaAz2V/src.c
+Linking C executable cmTC_2ca5a
+/usr/local/Cellar/cmake/3.25.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2ca5a.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat -Wformat-security  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_2ca5a.dir/src.c.o -o cmTC_2ca5a 
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test IS_WNO_IMPLICIT_FALLTHROUGH_SUPPORTED succeeded with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-jyXI50
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_a3a61/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_a3a61.dir/build.make CMakeFiles/cmTC_a3a61.dir/build
+Building C object CMakeFiles/cmTC_a3a61.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -DIS_WNO_IMPLICIT_FALLTHROUGH_SUPPORTED  -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat -Wformat-security -Wno-unused-function  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7   -Wno-implicit-fallthrough -MD -MT CMakeFiles/cmTC_a3a61.dir/src.c.o -MF CMakeFiles/cmTC_a3a61.dir/src.c.o.d -o CMakeFiles/cmTC_a3a61.dir/src.c.o -c /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-jyXI50/src.c
+Linking C executable cmTC_a3a61
+/usr/local/Cellar/cmake/3.25.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a3a61.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat -Wformat-security -Wno-unused-function  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_a3a61.dir/src.c.o -o cmTC_a3a61 
+
+
+Source file was:
+int main(void) { return 0; }
+
+Determining if the prototype qsort_r exists for GIT_QSORT_R_BSD passed with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-k6XWot
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_633b9/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_633b9.dir/build.make CMakeFiles/cmTC_633b9.dir/build
+Building C object CMakeFiles/cmTC_633b9.dir/CheckPrototypeDefinition.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat -Wformat-security  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -MD -MT CMakeFiles/cmTC_633b9.dir/CheckPrototypeDefinition.c.o -MF CMakeFiles/cmTC_633b9.dir/CheckPrototypeDefinition.c.o.d -o CMakeFiles/cmTC_633b9.dir/CheckPrototypeDefinition.c.o -c /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-k6XWot/CheckPrototypeDefinition.c
+/Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-k6XWot/CheckPrototypeDefinition.c:14:20: warning: unused parameter 'base' [-Wunused-parameter]
+void qsort_r(void *base, size_t nmemb, size_t size, void *thunk, int (*compar)(void *, const void *, const void *)) {
+                   ^
+/Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-k6XWot/CheckPrototypeDefinition.c:14:33: warning: unused parameter 'nmemb' [-Wunused-parameter]
+void qsort_r(void *base, size_t nmemb, size_t size, void *thunk, int (*compar)(void *, const void *, const void *)) {
+                                ^
+/Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-k6XWot/CheckPrototypeDefinition.c:14:47: warning: unused parameter 'size' [-Wunused-parameter]
+void qsort_r(void *base, size_t nmemb, size_t size, void *thunk, int (*compar)(void *, const void *, const void *)) {
+                                              ^
+/Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-k6XWot/CheckPrototypeDefinition.c:14:59: warning: unused parameter 'thunk' [-Wunused-parameter]
+void qsort_r(void *base, size_t nmemb, size_t size, void *thunk, int (*compar)(void *, const void *, const void *)) {
+                                                          ^
+/Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-k6XWot/CheckPrototypeDefinition.c:14:72: warning: unused parameter 'compar' [-Wunused-parameter]
+void qsort_r(void *base, size_t nmemb, size_t size, void *thunk, int (*compar)(void *, const void *, const void *)) {
+                                                                       ^
+5 warnings generated.
+Linking C executable cmTC_633b9
+/usr/local/Cellar/cmake/3.25.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_633b9.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat -Wformat-security  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_633b9.dir/CheckPrototypeDefinition.c.o -o cmTC_633b9 
+
+
+
+Determining if the function getentropy exists passed with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-Esiktb
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_39ffb/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_39ffb.dir/build.make CMakeFiles/cmTC_39ffb.dir/build
+Building C object CMakeFiles/cmTC_39ffb.dir/CheckFunctionExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat -Wformat-security -DCHECK_FUNCTION_EXISTS=getentropy -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -MD -MT CMakeFiles/cmTC_39ffb.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_39ffb.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_39ffb.dir/CheckFunctionExists.c.o -c /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-Esiktb/CheckFunctionExists.c
+Linking C executable cmTC_39ffb
+/usr/local/Cellar/cmake/3.25.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_39ffb.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat -Wformat-security -DCHECK_FUNCTION_EXISTS=getentropy -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_39ffb.dir/CheckFunctionExists.c.o -o cmTC_39ffb 
+
+
+
+Determining if the function getloadavg exists passed with the following output:
+Change Dir: /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-xCJl1L
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_9462d/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_9462d.dir/build.make CMakeFiles/cmTC_9462d.dir/build
+Building C object CMakeFiles/cmTC_9462d.dir/CheckFunctionExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat -Wformat-security -DCHECK_FUNCTION_EXISTS=getloadavg -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -MD -MT CMakeFiles/cmTC_9462d.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_9462d.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_9462d.dir/CheckFunctionExists.c.o -c /Users/makiokarasawa/Documents/Sandbox/simple-markdown-editor-ts/vendor/bundle/ruby/3.0.0/gems/rugged-1.5.1/vendor/libgit2/build/CMakeFiles/CMakeScratch/TryCompile-xCJl1L/CheckFunctionExists.c
+Linking C executable cmTC_9462d
+/usr/local/Cellar/cmake/3.25.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9462d.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc -D_GNU_SOURCE -fPIC -Werror -Wno-error -Wall -Wextra -Wdocumentation -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wmissing-declarations -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc11-extensions -Wformat -Wformat-security -DCHECK_FUNCTION_EXISTS=getloadavg -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_9462d.dir/CheckFunctionExists.c.o -o cmTC_9462d 
+
+
+

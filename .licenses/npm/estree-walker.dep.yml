@@ -1,0 +1,11 @@
+---
+name: estree-walker
+version: 1.0.1
+type: npm
+summary: Traverse an ESTree-compliant AST
+homepage:
+license: mit
+licenses:
+- sources: README.md
+  text: MIT
+notices: []

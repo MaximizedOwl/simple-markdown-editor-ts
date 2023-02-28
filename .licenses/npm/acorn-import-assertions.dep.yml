@@ -1,0 +1,11 @@
+---
+name: acorn-import-assertions
+version: 1.8.0
+type: npm
+summary: Support for import assertions in acorn
+homepage:
+license: mit
+licenses:
+- sources: README.md
+  text: This plugin is released under an MIT License.
+notices: []

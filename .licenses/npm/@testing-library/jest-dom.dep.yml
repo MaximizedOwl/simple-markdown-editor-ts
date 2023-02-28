@@ -1,0 +1,55 @@
+---
+name: "@testing-library/jest-dom"
+version: 5.16.5
+type: npm
+summary: Custom jest matchers to test the state of the DOM
+homepage: https://github.com/testing-library/jest-dom#readme
+license: mit
+licenses:
+- sources: LICENSE
+  text: |
+    The MIT License (MIT)
+    Copyright (c) 2017 Kent C. Dodds
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.
+- sources: README.md
+  text: "MIT\n\n<!-- prettier-ignore-start -->\n[jest]: https://facebook.github.io/jest/\n[dom-testing-library]:
+    https://github.com/testing-library/dom-testing-library\n[react-testing-library]:\n
+    \ https://github.com/testing-library/react-testing-library\n[npm]: https://www.npmjs.com/\n[node]:
+    https://nodejs.org\n[build-badge]: https://img.shields.io/github/workflow/status/testing-library/jest-dom/validate?logo=github&style=flat-square\n[build]:
+    https://github.com/testing-library/jest-dom/actions?query=workflow%3Avalidate\n[coverage-badge]:
+    \n  https://img.shields.io/codecov/c/github/testing-library/jest-dom.svg?style=flat-square\n[coverage]:
+    https://codecov.io/github/testing-library/jest-dom\n[version-badge]:\n https://img.shields.io/npm/v/@testing-library/jest-dom.svg?style=flat-square\n[package]:
+    https://www.npmjs.com/package/@testing-library/jest-dom\n[downloads-badge]: \n
+    \ https://img.shields.io/npm/dm/@testing-library/jest-dom.svg?style=flat-square\n[npmtrends]:
+    http://www.npmtrends.com/@testing-library/jest-dom\n[license-badge]: \n  https://img.shields.io/npm/l/@testing-library/jest-dom.svg?style=flat-square\n[license]:
+    https://github.com/testing-library/jest-dom/blob/main/LICENSE\n[prs-badge]: \n
+    \ https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square\n[prs]:
+    http://makeapullrequest.com\n[coc-badge]: \n  https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square\n[coc]:
+    \n  https://github.com/testing-library/jest-dom/blob/main/other/CODE_OF_CONDUCT.md\n[github-watch-badge]:\n
+    \ https://img.shields.io/github/watchers/testing-library/jest-dom.svg?style=social\n[github-watch]:
+    https://github.com/testing-library/jest-dom/watchers\n[github-star-badge]:\n  https://img.shields.io/github/stars/testing-library/jest-dom.svg?style=social\n[github-star]:
+    https://github.com/testing-library/jest-dom/stargazers\n[twitter]:\n  https://twitter.com/intent/tweet?text=Check%20out%20jest-dom%20by%20%40gnapse%20https%3A%2F%2Fgithub.com%2Ftesting-library%2Fjest-dom%20%F0%9F%91%8D\n[twitter-badge]:\n
+    \ https://img.shields.io/twitter/url/https/github.com/testing-library/jest-dom.svg?style=social\n[emojis]:
+    https://github.com/all-contributors/all-contributors#emoji-key\n[all-contributors]:
+    https://github.com/all-contributors/all-contributors\n[all-contributors-badge]:
+    \n  https://img.shields.io/github/all-contributors/testing-library/jest-dom?color=orange&style=flat-square\n[guiding-principle]:
+    https://testing-library.com/docs/guiding-principles\n[discord-badge]: https://img.shields.io/discord/723559267868737556.svg?color=7389D8&labelColor=6A7EC2&logo=discord&logoColor=ffffff&style=flat-square\n[discord]:
+    https://discord.gg/testing-library\n<!-- prettier-ignore-end -->"
+notices: []

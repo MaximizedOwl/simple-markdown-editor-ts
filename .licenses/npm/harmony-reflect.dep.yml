@@ -1,0 +1,9 @@
+---
+name: harmony-reflect
+version: 1.6.2
+type: npm
+summary: ES5 shim for ES6 (ECMAScript 6) Reflect and Proxy objects
+homepage: https://github.com/tvcutsem/harmony-reflect
+license: other
+licenses: []
+notices: []

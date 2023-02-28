@@ -1,0 +1,13 @@
+---
+name: jake
+version: 10.8.5
+type: npm
+summary: JavaScript build tool, similar to Make or Rake
+homepage:
+license: apache-2.0
+licenses:
+- sources: README.md
+  text: |-
+    Licensed under the Apache License, Version 2.0
+    (<http://www.apache.org/licenses/LICENSE-2.0>)
+notices: []
