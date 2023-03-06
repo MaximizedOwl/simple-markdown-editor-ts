@@ -62,7 +62,7 @@ function App() {
         <div className='footer'>
           <div className='footer-menu'>
             <Stack direction='row' spacing={2}>
-              <Button variant='outlined'>Gist</Button>
+              <Button variant='outlined'>to Gist</Button>
             </Stack>
           </div>
         </div>
