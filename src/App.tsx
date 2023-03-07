@@ -29,12 +29,21 @@ const sayHello = () => {
 
   // Menu
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
-  const isOpen = Boolean(anchorEl);
+  const isOpen: boolean = Boolean(anchorEl);
   const handleClickMenu = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
   };
   const handleCloseMenu = () => {
     setAnchorEl(null);
+  };
+  const handleClickUsage = () => {
+    // Usageのページ表示
+    let usageUrl: string =
+      'https://github.com/MaximizedOwl/simple-markdown-editor-ts#readme';
+    window.open(usageUrl);
+
+    // メニューを閉じる処理
+    handleCloseMenu();
   };
 
   return (
@@ -62,7 +71,7 @@ const sayHello = () => {
                 anchorEl={anchorEl}
                 MenuListProps={{ 'aria-labelledby': 'header-button' }}>
                 <MenuList>
-                  <MenuItem onClick={handleCloseMenu}>
+                  <MenuItem onClick={handleClickUsage}>
                     <ListItemIcon>
                       <HelpIcon />
                     </ListItemIcon>
