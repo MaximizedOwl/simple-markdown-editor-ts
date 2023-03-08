@@ -49,12 +49,12 @@
 }
 
 .footer {
+  font-size: calc(7px + 1vmin);
   min-height: 10vh;
   max-height: 10vh;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  /* padding-bottom: 5vh; */
+  justify-content: center;
 }
 
 .footer-menu {
