@@ -4,16 +4,35 @@ import HelpIcon from '@mui/icons-material/Help';
 import MenuIcon from '@mui/icons-material/Menu';
 import ShareIcon from '@mui/icons-material/Share';
 import Textarea from '@mui/joy/Textarea';
-import { ListItemIcon, ListItemText, Menu, MenuList } from '@mui/material';
+import {
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogContentText,
+  DialogTitle,
+  ListItemIcon,
+  ListItemText,
+  Menu,
+  MenuList,
+  TextField,
+} from '@mui/material';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import Stack from '@mui/material/Stack';
-import { useState } from 'react';
+import { Octokit } from '@octokit/core';
+import {
+  Auth,
+  getAuth,
+  GithubAuthProvider,
+  signInWithPopup,
+} from 'firebase/auth';
+import { useEffect, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { dark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import remarkGfm from 'remark-gfm';
 import './App.css';
+import './firebaseApp';
 
 function App() {
   // Textbox
@@ -44,6 +63,81 @@ const sayHello = () => {
 
     // メニューを閉じる処理
     handleCloseMenu();
+  };
+
+  /* 
+    Firebase認証関連
+  */
+  const [token, setToken] = useState<string | null>(null);
+  const [auth, setAuth] = useState<Auth | null>(null);
+  const [provider, setProvider] = useState<GithubAuthProvider | null>(null);
+
+  // GitHub OAuth Provider ObjectのInstanceを作成
+  useEffect(() => {
+    if (provider === null) {
+      const newProvider = new GithubAuthProvider();
+      newProvider.addScope('gist');
+      setProvider(newProvider);
+    }
+  }, [provider]);
+
+  // Firebase Appに対するAuth instanceを取得
+  useEffect(() => {
+    if (provider !== null && auth === null) {
+      setAuth(getAuth());
+      console.log(auth);
+    }
+  }, [auth, provider]);
+
+  // ポップアップによるサインインを実施し、成功したらアクセストークンを取得する
+  useEffect(() => {
+    if (provider !== null && auth !== null && token === null) {
+      signInWithPopup(auth, provider).then((result) => {
+        const credential = GithubAuthProvider.credentialFromResult(result);
+        if (credential && credential.accessToken) {
+          setToken(credential.accessToken);
+          console.log('token: ' + credential.accessToken);
+        }
+        console.log(result.user);
+      });
+    }
+  }, [auth, provider, token]);
+
+  /* 
+    Gistに投稿する処理
+  */
+  const handleClickPostGist = async (str: string) => {
+    console.log(str);
+
+    const octokit = new Octokit({
+      auth: token,
+    });
+
+    await octokit.request('POST /gists', {
+      description: 'Example of a gist',
+      public: false,
+      files: {
+        'README.md': {
+          content: str,
+        },
+      },
+    });
+
+    // GistPostDialogを閉じる処理
+    handleClose();
+
+    // メニューを閉じる処理
+    handleCloseMenu();
+  };
+
+  const [openGistDialog, setOpenGistDialog] = useState(false);
+
+  const handleClickOpen = () => {
+    setOpenGistDialog(true);
+  };
+
+  const handleClose = () => {
+    setOpenGistDialog(false);
   };
 
   return (
@@ -89,6 +183,65 @@ const sayHello = () => {
                     </ListItemIcon>
                     <ListItemText>Share</ListItemText>
                   </MenuItem>
+                  <MenuItem onClick={() => handleClickOpen()}>
+                    <ListItemIcon>
+                      <GitHubIcon />
+                    </ListItemIcon>
+                    <ListItemText>Post Gist</ListItemText>
+                  </MenuItem>
+                  <Dialog
+                    open={openGistDialog}
+                    onClose={handleClose}
+                    aria-labelledby='edit-apartment'>
+                    <DialogTitle id='edit-apartment'>
+                      Post to your Gist
+                    </DialogTitle>
+                    <DialogContent>
+                      <DialogContentText>
+                        Please input file name and description.
+                      </DialogContentText>
+                      <TextField
+                        autoFocus
+                        margin='dense'
+                        id='file-name'
+                        label='file-name'
+                        type='text'
+                        fullWidth
+                      />
+                      <TextField
+                        autoFocus
+                        margin='dense'
+                        id='description'
+                        label='description'
+                        type='text'
+                        fullWidth
+                      />
+                      <Textarea
+                        readOnly
+                        placeholder='# type something'
+                        maxRows={15}
+                        size='lg'
+                        variant='outlined'
+                        name='postContent'
+                        className='dialog-textarea'
+                        value={str}
+                        sx={{
+                          minWidth: '35vw',
+                          maxWidth: '35vw',
+                        }}
+                      />
+                    </DialogContent>
+                    <DialogActions>
+                      <Button onClick={handleClose} color='secondary'>
+                        Cancel
+                      </Button>
+                      <Button
+                        onClick={() => handleClickPostGist(str)}
+                        color='primary'>
+                        Submit
+                      </Button>
+                    </DialogActions>
+                  </Dialog>
                 </MenuList>
               </Menu>
             </Stack>
@@ -148,10 +301,7 @@ const sayHello = () => {
         <div className='footer'>
           <div className='footer-menu'>
             <Stack direction='row' spacing={2}>
-              <Button variant='outlined'>
-                <GitHubIcon />
-                to Gist
-              </Button>
+              Copyright © 2023 maximizedowl
             </Stack>
           </div>
         </div>
