@@ -4,12 +4,16 @@ import HelpIcon from '@mui/icons-material/Help';
 import MenuIcon from '@mui/icons-material/Menu';
 import ShareIcon from '@mui/icons-material/Share';
 import Textarea from '@mui/joy/Textarea';
+
 import {
+  Checkbox,
   Dialog,
   DialogActions,
   DialogContent,
   DialogContentText,
   DialogTitle,
+  FormControlLabel,
+  FormGroup,
   ListItemIcon,
   ListItemText,
   Menu,
@@ -27,12 +31,20 @@ import {
   signInWithPopup,
 } from 'firebase/auth';
 import { useEffect, useState } from 'react';
+import { SubmitHandler, useForm } from 'react-hook-form';
 import ReactMarkdown from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { dark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import remarkGfm from 'remark-gfm';
 import './App.css';
 import './firebaseApp';
+
+interface GistFormInput {
+  fileName: string;
+  description: string;
+  secret: boolean;
+  postContent: string;
+}
 
 function App() {
   // Textbox
@@ -106,19 +118,17 @@ const sayHello = () => {
   /* 
     Gistに投稿する処理
   */
-  const handleClickPostGist = async (str: string) => {
-    console.log(str);
-
+  const handleClickPostGist: SubmitHandler<GistFormInput> = async (data) => {
     const octokit = new Octokit({
       auth: token,
     });
 
     await octokit.request('POST /gists', {
-      description: 'Example of a gist',
-      public: false,
+      description: data.description,
+      public: !data.secret,
       files: {
-        'README.md': {
-          content: str,
+        [data.fileName]: {
+          content: data.postContent,
         },
       },
     });
@@ -139,6 +149,8 @@ const sayHello = () => {
   const handleClose = () => {
     setOpenGistDialog(false);
   };
+
+  const { register, handleSubmit } = useForm<GistFormInput>();
 
   return (
     <div className='App'>
@@ -200,45 +212,55 @@ const sayHello = () => {
                       <DialogContentText>
                         Please input file name and description.
                       </DialogContentText>
-                      <TextField
-                        autoFocus
-                        margin='dense'
-                        id='file-name'
-                        label='file-name'
-                        type='text'
-                        fullWidth
-                      />
-                      <TextField
-                        autoFocus
-                        margin='dense'
-                        id='description'
-                        label='description'
-                        type='text'
-                        fullWidth
-                      />
-                      <Textarea
-                        readOnly
-                        placeholder='# type something'
-                        maxRows={15}
-                        size='lg'
-                        variant='outlined'
-                        name='postContent'
-                        className='dialog-textarea'
-                        value={str}
-                        sx={{
-                          minWidth: '35vw',
-                          maxWidth: '35vw',
-                        }}
-                      />
+                      <FormGroup>
+                        <TextField
+                          autoFocus
+                          margin='dense'
+                          id='file-name'
+                          label='file name'
+                          type='text'
+                          fullWidth
+                          required
+                          {...register('fileName')}
+                        />
+                        <TextField
+                          autoFocus
+                          margin='dense'
+                          id='description'
+                          label='description'
+                          type='text'
+                          fullWidth
+                          {...register('description')}
+                        />
+                        <FormControlLabel
+                          control={<Checkbox defaultChecked />}
+                          label='Secret'
+                          {...register('secret')}
+                        />
+                        <Textarea
+                          readOnly
+                          placeholder='# type something'
+                          maxRows={15}
+                          size='lg'
+                          variant='outlined'
+                          className='dialog-textarea'
+                          value={str}
+                          sx={{
+                            minWidth: '35vw',
+                            maxWidth: '35vw',
+                          }}
+                          {...register('postContent')}
+                        />
+                      </FormGroup>
                     </DialogContent>
                     <DialogActions>
                       <Button onClick={handleClose} color='secondary'>
                         Cancel
                       </Button>
                       <Button
-                        onClick={() => handleClickPostGist(str)}
+                        onClick={handleSubmit(handleClickPostGist)}
                         color='primary'>
-                        Submit
+                        Post
                       </Button>
                     </DialogActions>
                   </Dialog>
@@ -256,7 +278,7 @@ const sayHello = () => {
               maxRows={20}
               size='lg'
               variant='outlined'
-              name='postContent'
+              name='writingContent'
               className='textarea-input'
               value={str}
               onChange={(e) => setStr(e.target.value)}
