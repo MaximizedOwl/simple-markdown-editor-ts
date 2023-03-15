@@ -164,15 +164,15 @@ const sayHello = () => {
           },
         },
       });
+
+      // GistPostDialogを閉じる処理
+      handleCloseGistPostDialog();
+
+      // メニューを閉じる処理
+      handleCloseMenu();
     } else {
       alert('Please SignIn with GitHub.');
     }
-
-    // GistPostDialogを閉じる処理
-    handleCloseGistPostDialog();
-
-    // メニューを閉じる処理
-    handleCloseMenu();
   };
 
   const [openGistDialog, setOpenGistDialog] = useState(false);
