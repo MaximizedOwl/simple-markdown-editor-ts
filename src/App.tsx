@@ -52,9 +52,10 @@ function App() {
   - foo
   - buzz
 
-\`\`\`js
-const sayHello = () => {
-  console.log('Hello World.')
+\`\`\`ts
+const greeting = () => {
+  let greet: string = "Hello world.";
+  console.log(greet);
 }
 \`\`\``);
 
@@ -171,9 +172,7 @@ const sayHello = () => {
         console.log(
           `Success! Status: ${result.status}. Rate limit remaining: ${result.headers['x-ratelimit-remaining']}`
         );
-        alert(
-          `Success! Status: ${result.status}. Rate limit remaining: ${result.headers['x-ratelimit-remaining']}`
-        );
+        alert(`Success! 投稿先: ${result.data.html_url}`);
       } catch (error: any) {
         console.log(
           `Error! Status: ${error.status}. Rate limit remaining: ${error.headers['x-ratelimit-remaining']}. Message: ${error.response.data.message}`
