@@ -141,7 +141,9 @@ const sayHello = () => {
           // The AuthCredential type that was used.
           const credential = GithubAuthProvider.credentialFromError(error);
           // ...
-          alert(`Error! errorCode; ${error}}, errorMessage: ${errorMessage}`);
+          alert(
+            `Error! errorCode; ${errorCode}}, errorMessage: ${errorMessage}`
+          );
         });
     }
   };
@@ -155,15 +157,32 @@ const sayHello = () => {
         auth: token,
       });
 
-      await octokit.request('POST /gists', {
-        description: data.description,
-        public: !data.secret,
-        files: {
-          [data.fileName]: {
-            content: data.postContent,
+      try {
+        const result = await octokit.request('POST /gists', {
+          description: data.description,
+          public: !data.secret,
+          files: {
+            [data.fileName]: {
+              content: data.postContent,
+            },
           },
-        },
-      });
+        });
+
+        console.log(
+          `Success! Status: ${result.status}. Rate limit remaining: ${result.headers['x-ratelimit-remaining']}`
+        );
+        alert(
+          `Success! Status: ${result.status}. Rate limit remaining: ${result.headers['x-ratelimit-remaining']}`
+        );
+      } catch (error: any) {
+        console.log(
+          `Error! Status: ${error.status}. Rate limit remaining: ${error.headers['x-ratelimit-remaining']}. Message: ${error.response.data.message}`
+        );
+
+        alert(
+          `Error! Status: ${error.status}. Rate limit remaining: ${error.headers['x-ratelimit-remaining']}. Message: ${error.response.data.message}`
+        );
+      }
 
       // GistPostDialogを閉じる処理
       handleCloseGistPostDialog();
