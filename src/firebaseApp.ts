@@ -1,5 +1,8 @@
 import { initializeApp } from 'firebase/app';
 
+/* 
+  Firebase 
+*/
 const firebaseConfig = {
   apiKey: 'AIzaSyC3M5Xu9W1PHQVr6kb2ihPpIFDTPgsIAFk',
   authDomain: 'simple-markdown-editor-ts.firebaseapp.com',

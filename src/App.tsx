@@ -4,6 +4,13 @@ import HelpIcon from '@mui/icons-material/Help';
 import MenuIcon from '@mui/icons-material/Menu';
 import ShareIcon from '@mui/icons-material/Share';
 import Textarea from '@mui/joy/Textarea';
+import {
+  getAuth,
+  GithubAuthProvider,
+  signInWithPopup,
+  signOut,
+} from 'firebase/auth';
+import { useState } from 'react';
 
 import {
   Checkbox,
@@ -24,13 +31,6 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import Stack from '@mui/material/Stack';
 import { Octokit } from '@octokit/core';
-import {
-  Auth,
-  getAuth,
-  GithubAuthProvider,
-  signInWithPopup,
-} from 'firebase/auth';
-import { useEffect, useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import ReactMarkdown from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
@@ -79,62 +79,97 @@ const sayHello = () => {
 
   /* 
     Firebase認証関連
+    GitHunログイン関連
   */
-  const [token, setToken] = useState<string | null>(null);
-  const [auth, setAuth] = useState<Auth | null>(null);
-  const [provider, setProvider] = useState<GithubAuthProvider | null>(null);
+  const [isSignedIn, setIsSignedIn] = useState<boolean>(false);
+  const [token, setToken] = useState<string>('');
 
-  // GitHub OAuth Provider ObjectのInstanceを作成
-  useEffect(() => {
-    if (provider === null) {
-      const newProvider = new GithubAuthProvider();
-      newProvider.addScope('gist');
-      setProvider(newProvider);
-    }
-  }, [provider]);
+  const hangleClickSign = async () => {
+    const auth = getAuth();
 
-  // Firebase Appに対するAuth instanceを取得
-  useEffect(() => {
-    if (provider !== null && auth === null) {
-      setAuth(getAuth());
-      console.log(auth);
-    }
-  }, [auth, provider]);
+    if (isSignedIn) {
+      // サインアウト
+      await signOut(auth)
+        .then(() => {
+          // Sign-out successful.
+          setIsSignedIn(false);
+          alert('サインアウト完了');
+        })
+        .catch((error) => {
+          // An error happened.
+          // Handle Errors here.
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          // The email of the user's account used.
+          const email = error.customData.email;
+          // The AuthCredential type that was used.
+          const credential = GithubAuthProvider.credentialFromError(error);
+          // ...
 
-  // ポップアップによるサインインを実施し、成功したらアクセストークンを取得する
-  useEffect(() => {
-    if (provider !== null && auth !== null && token === null) {
-      signInWithPopup(auth, provider).then((result) => {
-        const credential = GithubAuthProvider.credentialFromResult(result);
-        if (credential && credential.accessToken) {
-          setToken(credential.accessToken);
-          console.log('token: ' + credential.accessToken);
-        }
-        console.log(result.user);
-      });
+          alert(`Error! errorCode; ${error}}, errorMessage: ${errorMessage}`);
+        });
+    } else {
+      // サインイン
+
+      const provider = new GithubAuthProvider();
+      provider.addScope('gist');
+
+      await signInWithPopup(auth, provider)
+        .then((result) => {
+          // This gives you a GitHub Access Token. You can use it to access the GitHub API.
+          const credential = GithubAuthProvider.credentialFromResult(result);
+          if (credential && credential.accessToken) {
+            setToken(credential.accessToken);
+            console.log('token: ' + credential.accessToken);
+          }
+
+          // The signed-in user info.
+          const user = result.user;
+          console.log(user);
+          setIsSignedIn(true);
+          alert('サインイン完了');
+
+          // IdP data available using getAdditionalUserInfo(result)
+          // ...
+        })
+        .catch((error) => {
+          // Handle Errors here.
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          // The email of the user's account used.
+          const email = error.customData.email;
+          // The AuthCredential type that was used.
+          const credential = GithubAuthProvider.credentialFromError(error);
+          // ...
+          alert(`Error! errorCode; ${error}}, errorMessage: ${errorMessage}`);
+        });
     }
-  }, [auth, provider, token]);
+  };
 
   /* 
     Gistに投稿する処理
   */
   const handleClickPostGist: SubmitHandler<GistFormInput> = async (data) => {
-    const octokit = new Octokit({
-      auth: token,
-    });
+    if (isSignedIn) {
+      const octokit = new Octokit({
+        auth: token,
+      });
 
-    await octokit.request('POST /gists', {
-      description: data.description,
-      public: !data.secret,
-      files: {
-        [data.fileName]: {
-          content: data.postContent,
+      await octokit.request('POST /gists', {
+        description: data.description,
+        public: !data.secret,
+        files: {
+          [data.fileName]: {
+            content: data.postContent,
+          },
         },
-      },
-    });
+      });
+    } else {
+      alert('Please SignIn with GitHub.');
+    }
 
     // GistPostDialogを閉じる処理
-    handleClose();
+    handleCloseGistPostDialog();
 
     // メニューを閉じる処理
     handleCloseMenu();
@@ -146,7 +181,7 @@ const sayHello = () => {
     setOpenGistDialog(true);
   };
 
-  const handleClose = () => {
+  const handleCloseGistPostDialog = () => {
     setOpenGistDialog(false);
   };
 
@@ -203,7 +238,7 @@ const sayHello = () => {
                   </MenuItem>
                   <Dialog
                     open={openGistDialog}
-                    onClose={handleClose}
+                    onClose={handleCloseGistPostDialog}
                     aria-labelledby='edit-apartment'>
                     <DialogTitle id='edit-apartment'>
                       Post to your Gist
@@ -254,7 +289,17 @@ const sayHello = () => {
                       </FormGroup>
                     </DialogContent>
                     <DialogActions>
-                      <Button onClick={handleClose} color='secondary'>
+                      <Button
+                        onClick={() => hangleClickSign()}
+                        color='primary'
+                        sx={{
+                          positon: 'left',
+                        }}>
+                        {isSignedIn ? 'Sign Out GitHub' : 'Sign In GitHub'}
+                      </Button>
+                      <Button
+                        onClick={handleCloseGistPostDialog}
+                        color='secondary'>
                         Cancel
                       </Button>
                       <Button
