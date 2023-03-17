@@ -21,16 +21,20 @@ import {
   DialogTitle,
   FormControlLabel,
   FormGroup,
+  Link,
   ListItemIcon,
   ListItemText,
   Menu,
   MenuList,
+  Snackbar,
   TextField,
 } from '@mui/material';
+import MuiAlert, { AlertColor, AlertProps } from '@mui/material/Alert';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import Stack from '@mui/material/Stack';
 import { Octokit } from '@octokit/core';
+import React from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import ReactMarkdown from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
@@ -38,6 +42,7 @@ import { dark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import remarkGfm from 'remark-gfm';
 import './App.css';
 import './firebaseApp';
+import Constants from './utils/constants';
 
 interface GistFormInput {
   fileName: string;
@@ -46,18 +51,19 @@ interface GistFormInput {
   postContent: string;
 }
 
+/* 
+
+ */
+const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(
+  props,
+  ref
+) {
+  return <MuiAlert elevation={6} ref={ref} variant='filled' {...props} />;
+});
+
 function App() {
   // Textbox
-  const [str, setStr] = useState(`# Hello world
-  - foo
-  - buzz
-
-\`\`\`ts
-const greeting = () => {
-  let greet: string = "Hello world.";
-  console.log(greet);
-}
-\`\`\``);
+  const [str, setStr] = useState(Constants.INIT_TEXTBOX_STR);
 
   // Menu
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
@@ -70,9 +76,7 @@ const greeting = () => {
   };
   const handleClickUsage = () => {
     // Usageのページ表示
-    let usageUrl: string =
-      'https://github.com/MaximizedOwl/simple-markdown-editor-ts#readme';
-    window.open(usageUrl);
+    window.open(Constants.URL_USAGE);
 
     // メニューを閉じる処理
     handleCloseMenu();
@@ -94,7 +98,11 @@ const greeting = () => {
         .then(() => {
           // Sign-out successful.
           setIsSignedIn(false);
-          alert('サインアウト完了');
+
+          // 成功通知
+          setSnackbarType('success');
+          setSnackbarMessage(Constants.BUTTON_SIGNOUT_GITHUB);
+          setIsOpenGistPostSnackbar(true);
         })
         .catch((error) => {
           // An error happened.
@@ -105,9 +113,13 @@ const greeting = () => {
           const email = error.customData.email;
           // The AuthCredential type that was used.
           const credential = GithubAuthProvider.credentialFromError(error);
-          // ...
 
-          alert(`Error! errorCode; ${error}}, errorMessage: ${errorMessage}`);
+          // 失敗通知
+          setSnackbarType('error');
+          setSnackbarMessage(
+            `Error! errorCode; ${errorCode}}, errorMessage: ${errorMessage}`
+          );
+          setIsOpenGistPostSnackbar(true);
         });
     } else {
       // サインイン
@@ -128,10 +140,11 @@ const greeting = () => {
           const user = result.user;
           console.log(user);
           setIsSignedIn(true);
-          alert('サインイン完了');
 
-          // IdP data available using getAdditionalUserInfo(result)
-          // ...
+          // 成功通知
+          setSnackbarType('success');
+          setSnackbarMessage(Constants.BUTTON_SIGNIN_GITHUB);
+          setIsOpenGistPostSnackbar(true);
         })
         .catch((error) => {
           // Handle Errors here.
@@ -141,10 +154,13 @@ const greeting = () => {
           const email = error.customData.email;
           // The AuthCredential type that was used.
           const credential = GithubAuthProvider.credentialFromError(error);
-          // ...
-          alert(
+
+          // 失敗通知
+          setSnackbarType('error');
+          setSnackbarMessage(
             `Error! errorCode; ${errorCode}}, errorMessage: ${errorMessage}`
           );
+          setIsOpenGistPostSnackbar(true);
         });
     }
   };
@@ -158,8 +174,8 @@ const greeting = () => {
         auth: token,
       });
 
-      try {
-        const result = await octokit.request('POST /gists', {
+      await octokit
+        .request('POST /gists', {
           description: data.description,
           public: !data.secret,
           files: {
@@ -167,29 +183,40 @@ const greeting = () => {
               content: data.postContent,
             },
           },
+        })
+        .then((result) => {
+          console.log(
+            `Success! Status: ${result.status}. Rate limit remaining: ${result.headers['x-ratelimit-remaining']}`
+          );
+
+          // 成功通知
+          setSnackbarType('success');
+          setSnackbarMessage(Constants.POST_SUCCESS + result.data.html_url);
+          setIsOpenGistPostSnackbar(true);
+
+          // GistPostDialogを閉じる処理
+          handleCloseGistPostDialog();
+
+          // メニューを閉じる処理
+          handleCloseMenu();
+        })
+        .catch((error) => {
+          console.log(
+            `Error! Status: ${error.status}. Rate limit remaining: ${error.headers['x-ratelimit-remaining']}. Message: ${error.response.data.message}`
+          );
+
+          // 失敗通知
+          setSnackbarType('error');
+          setSnackbarMessage(
+            `Error! Status: ${error.status}. Rate limit remaining: ${error.headers['x-ratelimit-remaining']}. Message: ${error.response.data.message}`
+          );
+          setIsOpenGistPostSnackbar(true);
         });
-
-        console.log(
-          `Success! Status: ${result.status}. Rate limit remaining: ${result.headers['x-ratelimit-remaining']}`
-        );
-        alert(`Success! 投稿先: ${result.data.html_url}`);
-      } catch (error: any) {
-        console.log(
-          `Error! Status: ${error.status}. Rate limit remaining: ${error.headers['x-ratelimit-remaining']}. Message: ${error.response.data.message}`
-        );
-
-        alert(
-          `Error! Status: ${error.status}. Rate limit remaining: ${error.headers['x-ratelimit-remaining']}. Message: ${error.response.data.message}`
-        );
-      }
-
-      // GistPostDialogを閉じる処理
-      handleCloseGistPostDialog();
-
-      // メニューを閉じる処理
-      handleCloseMenu();
     } else {
-      alert('Please SignIn with GitHub.');
+      // サインインを求める警告通知
+      setSnackbarType('warning');
+      setSnackbarMessage(Constants.HAS_NOT_SIGNIN_GITHUB);
+      setIsOpenGistPostSnackbar(true);
     }
   };
 
@@ -205,12 +232,30 @@ const greeting = () => {
 
   const { register, handleSubmit } = useForm<GistFormInput>();
 
+  /* 
+    GistPost完了に関するSnackbar
+  */
+  const [isOpenGistPostSnackbar, setIsOpenGistPostSnackbar] =
+    useState<boolean>(false);
+  const [snackbarMessage, setSnackbarMessage] = useState<string>('');
+  const [snackbarType, setSnackbarType] = useState<AlertColor | undefined>();
+  const handleClose = (
+    event?: React.SyntheticEvent | Event,
+    reason?: string
+  ) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setIsOpenGistPostSnackbar(false);
+  };
+
   return (
     <div className='App'>
       <header>
         <div className='header'>
           <div className='header-title'>
-            <h2>Simple Markdown Editor</h2>
+            <h2>{Constants.SITE_TITLE}</h2>
           </div>
           <div className='header-menu'>
             <Stack direction='row' spacing={2}>
@@ -234,36 +279,51 @@ const greeting = () => {
                     <ListItemIcon>
                       <HelpIcon />
                     </ListItemIcon>
-                    <ListItemText>Usage</ListItemText>
+                    <ListItemText>{Constants.MENU_USAGE}</ListItemText>
                   </MenuItem>
                   <MenuItem onClick={handleCloseMenu}>
                     <ListItemIcon>
                       <DarkModeIcon />
                     </ListItemIcon>
-                    <ListItemText>Swich Theme</ListItemText>
+                    <ListItemText>{Constants.MENU_SWITCH_THEME}</ListItemText>
                   </MenuItem>
                   <MenuItem onClick={handleCloseMenu}>
                     <ListItemIcon>
                       <ShareIcon />
                     </ListItemIcon>
-                    <ListItemText>Share</ListItemText>
+                    <ListItemText>{Constants.MENU_SHARE}</ListItemText>
                   </MenuItem>
                   <MenuItem onClick={() => handleClickOpen()}>
                     <ListItemIcon>
                       <GitHubIcon />
                     </ListItemIcon>
-                    <ListItemText>Post Gist</ListItemText>
+                    <ListItemText>{Constants.MENU_POST_GIST}</ListItemText>
                   </MenuItem>
                   <Dialog
                     open={openGistDialog}
                     onClose={handleCloseGistPostDialog}
                     aria-labelledby='edit-apartment'>
                     <DialogTitle id='edit-apartment'>
-                      Post to your Gist
+                      {Constants.DIALOG_POST_GIST_TITLE}
                     </DialogTitle>
                     <DialogContent>
                       <DialogContentText>
-                        Please input file name and description.
+                        ファイル名とファイルの説明、公開設定について入力してください。
+                        GitHubにサインインしていない場合は、
+                        <Link
+                          target='_blank'
+                          rel='noopener'
+                          href='https://github.com/MaximizedOwl/simple-markdown-editor-ts#%E5%88%A9%E7%94%A8%E8%A6%8F%E7%B4%84'>
+                          利用規約
+                        </Link>
+                        と
+                        <Link
+                          target='_blank'
+                          rel='noopener'
+                          href='https://github.com/MaximizedOwl/simple-markdown-editor-ts#%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC'>
+                          プライバシ・ポリシー
+                        </Link>
+                        に同意した上でサインインを行ってください。
                       </DialogContentText>
                       <FormGroup>
                         <TextField
@@ -313,7 +373,9 @@ const greeting = () => {
                         sx={{
                           positon: 'left',
                         }}>
-                        {isSignedIn ? 'Sign Out GitHub' : 'Sign In GitHub'}
+                        {isSignedIn
+                          ? Constants.BUTTON_SIGNOUT_GITHUB
+                          : Constants.BUTTON_SIGNIN_GITHUB}
                       </Button>
                       <Button
                         onClick={handleCloseGistPostDialog}
@@ -326,6 +388,21 @@ const greeting = () => {
                         Post
                       </Button>
                     </DialogActions>
+                    <Snackbar
+                      open={isOpenGistPostSnackbar}
+                      autoHideDuration={10000}
+                      onClose={handleClose}
+                      anchorOrigin={{
+                        vertical: 'top',
+                        horizontal: 'center',
+                      }}>
+                      <Alert
+                        onClose={handleClose}
+                        severity={snackbarType}
+                        sx={{ width: '100%' }}>
+                        {snackbarMessage}
+                      </Alert>
+                    </Snackbar>
                   </Dialog>
                 </MenuList>
               </Menu>
@@ -386,7 +463,7 @@ const greeting = () => {
         <div className='footer'>
           <div className='footer-menu'>
             <Stack direction='row' spacing={2}>
-              Copyright © 2023 maximizedowl
+              {Constants.COPYRIGHT}
             </Stack>
           </div>
         </div>
