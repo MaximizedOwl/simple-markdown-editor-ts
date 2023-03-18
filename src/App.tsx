@@ -388,26 +388,26 @@ function App() {
                         Post
                       </Button>
                     </DialogActions>
-                    <Snackbar
-                      open={isOpenGistPostSnackbar}
-                      autoHideDuration={10000}
-                      onClose={handleClose}
-                      anchorOrigin={{
-                        vertical: 'top',
-                        horizontal: 'center',
-                      }}>
-                      <Alert
-                        onClose={handleClose}
-                        severity={snackbarType}
-                        sx={{ width: '100%' }}>
-                        {snackbarMessage}
-                      </Alert>
-                    </Snackbar>
                   </Dialog>
                 </MenuList>
               </Menu>
             </Stack>
           </div>
+          <Snackbar
+            open={isOpenGistPostSnackbar}
+            autoHideDuration={10000}
+            onClose={handleClose}
+            anchorOrigin={{
+              vertical: 'top',
+              horizontal: 'center',
+            }}>
+            <Alert
+              onClose={handleClose}
+              severity={snackbarType}
+              sx={{ width: '100%' }}>
+              {snackbarMessage}
+            </Alert>
+          </Snackbar>
         </div>
       </header>
       <main>
