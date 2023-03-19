@@ -395,7 +395,7 @@ function App() {
           </div>
           <Snackbar
             open={isOpenGistPostSnackbar}
-            autoHideDuration={10000}
+            autoHideDuration={50000}
             onClose={handleClose}
             anchorOrigin={{
               vertical: 'top',
