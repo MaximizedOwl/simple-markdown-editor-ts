@@ -261,11 +261,15 @@ function App() {
             <Stack direction='row' spacing={2}>
               <Button
                 onClick={handleClickMenu}
-                variant='outlined'
                 id='header-button-menu'
+                variant='outlined'
                 aria-controls={isOpen ? 'header-menu' : undefined}
                 aria-haspopup='true'
-                aria-expanded={isOpen ? 'true' : undefined}>
+                aria-expanded={isOpen ? 'true' : undefined}
+                sx={{
+                  color: 'white',
+                  borderColor: 'white',
+                }}>
                 <MenuIcon />
               </Button>
               <Menu
