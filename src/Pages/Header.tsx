@@ -380,7 +380,7 @@ const Header = () => {
         </div>
         <Snackbar
           open={isOpenGistPostSnackbar}
-          autoHideDuration={50000}
+          autoHideDuration={5000}
           onClose={handleClose}
           anchorOrigin={{
             vertical: 'top',
