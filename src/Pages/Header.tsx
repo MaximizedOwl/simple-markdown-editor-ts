@@ -32,7 +32,7 @@ import {
   signInWithPopup,
   signOut,
 } from 'firebase/auth';
-import React, { useContext, useState } from 'react';
+import React, { useCallback, useContext, useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import Alert from '../components/Alert';
 import { StrContext } from '../providers/StrProvider';
@@ -46,24 +46,25 @@ interface GistFormInput {
 }
 
 const Header = () => {
+  /* 
+    Textareaに入力された文字列
+   */
   const { str, setStr } = useContext(StrContext);
 
-  // Menu
+  /* 
+    Menu関連
+  */
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const isOpen: boolean = Boolean(anchorEl);
-  const handleClickMenu = (event: React.MouseEvent<HTMLButtonElement>) => {
-    setAnchorEl(event.currentTarget);
-  };
   const handleCloseMenu = () => {
     setAnchorEl(null);
   };
-  const handleClickUsage = () => {
-    // Usageのページ表示
-    window.open(Constants.URL_USAGE);
 
-    // メニューを閉じる処理
-    handleCloseMenu();
-  };
+  /* 
+    Gist Post Dialog関連
+  */
+  const { register, handleSubmit } = useForm<GistFormInput>();
+  const [openGistDialog, setOpenGistDialog] = useState(false);
 
   /* 
     Firebase認証関連
@@ -72,80 +73,124 @@ const Header = () => {
   const [isSignedIn, setIsSignedIn] = useState<boolean>(false);
   const [token, setToken] = useState<string>('');
 
-  const hangleClickSign = async () => {
-    const auth = getAuth();
+  /* 
+    GistPost完了に関するSnackbar
+  */
+  const [isOpenGistPostSnackbar, setIsOpenGistPostSnackbar] =
+    useState<boolean>(false);
+  const [snackbarMessage, setSnackbarMessage] = useState<string>('');
+  const [snackbarType, setSnackbarType] = useState<AlertColor | undefined>();
 
-    if (isSignedIn) {
-      // サインアウト
-      await signOut(auth)
-        .then(() => {
-          // Sign-out successful.
-          setIsSignedIn(false);
+  /* 
+    Common EventHandler
+  */
+  const handleClick = useCallback(async (e: React.MouseEvent<HTMLElement>) => {
+    if (e.currentTarget.id === 'header-button-menu') {
+      /* 
+        open Menu 
+      */
+      setAnchorEl(e.currentTarget);
+    } else if (e.currentTarget.id === 'menu-usage') {
+      /*
+        open Usage
+      */
+      // Usageのページ表示
+      window.open(Constants.URL_USAGE);
 
-          // 成功通知
-          setSnackbarType('success');
-          setSnackbarMessage(Constants.BUTTON_SIGNOUT_GITHUB);
-          setIsOpenGistPostSnackbar(true);
-        })
-        .catch((error) => {
-          // An error happened.
-          // Handle Errors here.
-          const errorCode = error.code;
-          const errorMessage = error.message;
-          // The email of the user's account used.
-          const email = error.customData.email;
-          // The AuthCredential type that was used.
-          const credential = GithubAuthProvider.credentialFromError(error);
+      // メニューを閉じる処理
+      handleCloseMenu();
+    } else if (e.currentTarget.id === 'button-sign') {
+      /* 
+        SignIn and SignOut
+      */
+      const auth = getAuth();
 
-          // 失敗通知
-          setSnackbarType('error');
-          setSnackbarMessage(
-            `Error! errorCode; ${errorCode}}, errorMessage: ${errorMessage}`
-          );
-          setIsOpenGistPostSnackbar(true);
-        });
-    } else {
-      // サインイン
+      if (isSignedIn) {
+        // サインアウト
+        await signOut(auth)
+          .then(() => {
+            // Sign-out successful.
+            setIsSignedIn(false);
 
-      const provider = new GithubAuthProvider();
-      provider.addScope('gist');
+            // 成功通知
+            setSnackbarType('success');
+            setSnackbarMessage(Constants.BUTTON_SIGNOUT_GITHUB);
+            setIsOpenGistPostSnackbar(true);
+          })
+          .catch((error) => {
+            // An error happened.
+            // Handle Errors here.
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            // The email of the user's account used.
+            const email = error.customData.email;
+            // The AuthCredential type that was used.
+            const credential = GithubAuthProvider.credentialFromError(error);
 
-      await signInWithPopup(auth, provider)
-        .then((result) => {
-          // This gives you a GitHub Access Token. You can use it to access the GitHub API.
-          const credential = GithubAuthProvider.credentialFromResult(result);
-          if (credential && credential.accessToken) {
-            setToken(credential.accessToken);
-            console.log('token: ' + credential.accessToken);
-          }
+            // 失敗通知
+            setSnackbarType('error');
+            setSnackbarMessage(
+              `Error! errorCode; ${errorCode}}, errorMessage: ${errorMessage}`
+            );
+            setIsOpenGistPostSnackbar(true);
+          });
+      } else {
+        // サインイン
 
-          // The signed-in user info.
-          const user = result.user;
-          console.log(user);
-          setIsSignedIn(true);
+        const provider = new GithubAuthProvider();
+        provider.addScope('gist');
 
-          // 成功通知
-          setSnackbarType('success');
-          setSnackbarMessage(Constants.BUTTON_SIGNIN_GITHUB);
-          setIsOpenGistPostSnackbar(true);
-        })
-        .catch((error) => {
-          // Handle Errors here.
-          const errorCode = error.code;
-          const errorMessage = error.message;
-          // The email of the user's account used.
-          const email = error.customData.email;
-          // The AuthCredential type that was used.
-          const credential = GithubAuthProvider.credentialFromError(error);
+        await signInWithPopup(auth, provider)
+          .then((result) => {
+            // This gives you a GitHub Access Token. You can use it to access the GitHub API.
+            const credential = GithubAuthProvider.credentialFromResult(result);
+            if (credential && credential.accessToken) {
+              setToken(credential.accessToken);
+              console.log('token: ' + credential.accessToken);
+            }
 
-          // 失敗通知
-          setSnackbarType('error');
-          setSnackbarMessage(
-            `Error! errorCode; ${errorCode}}, errorMessage: ${errorMessage}`
-          );
-          setIsOpenGistPostSnackbar(true);
-        });
+            // The signed-in user info.
+            const user = result.user;
+            console.log(user);
+            setIsSignedIn(true);
+
+            // 成功通知
+            setSnackbarType('success');
+            setSnackbarMessage(Constants.BUTTON_SIGNIN_GITHUB);
+            setIsOpenGistPostSnackbar(true);
+          })
+          .catch((error) => {
+            // Handle Errors here.
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            // The email of the user's account used.
+            const email = error.customData.email;
+            // The AuthCredential type that was used.
+            const credential = GithubAuthProvider.credentialFromError(error);
+
+            // 失敗通知
+            setSnackbarType('error');
+            setSnackbarMessage(
+              `Error! errorCode; ${errorCode}}, errorMessage: ${errorMessage}`
+            );
+            setIsOpenGistPostSnackbar(true);
+          });
+      }
+    } else if (e.currentTarget.id === 'menu-share') {
+      setSnackbarType('info');
+      setSnackbarMessage(Constants.Developing);
+      setIsOpenGistPostSnackbar(true);
+    } else if (e.currentTarget.id === 'menu-switchTheme') {
+      setSnackbarType('info');
+      setSnackbarMessage(Constants.Developing);
+      setIsOpenGistPostSnackbar(true);
+    } else if (e.currentTarget.id === 'menu-gist-post-dialog') {
+      setOpenGistDialog(true);
     }
+  }, []);
+
+  const handleCloseGistPostDialog = () => {
+    setOpenGistDialog(false);
   };
 
   /* 
@@ -203,31 +248,6 @@ const Header = () => {
     }
   };
 
-  const handleClickDeveloping = () => {
-    setSnackbarType('info');
-    setSnackbarMessage(Constants.Developing);
-    setIsOpenGistPostSnackbar(true);
-  };
-
-  const [openGistDialog, setOpenGistDialog] = useState(false);
-
-  const handleClickOpen = () => {
-    setOpenGistDialog(true);
-  };
-
-  const handleCloseGistPostDialog = () => {
-    setOpenGistDialog(false);
-  };
-
-  const { register, handleSubmit } = useForm<GistFormInput>();
-
-  /* 
-    GistPost完了に関するSnackbar
-  */
-  const [isOpenGistPostSnackbar, setIsOpenGistPostSnackbar] =
-    useState<boolean>(false);
-  const [snackbarMessage, setSnackbarMessage] = useState<string>('');
-  const [snackbarType, setSnackbarType] = useState<AlertColor | undefined>();
   const handleClose = (
     event?: React.SyntheticEvent | Event,
     reason?: string
@@ -238,6 +258,7 @@ const Header = () => {
 
     setIsOpenGistPostSnackbar(false);
   };
+
   return (
     <header>
       <div className='header'>
@@ -247,7 +268,7 @@ const Header = () => {
         <div className='header-menu'>
           <Stack direction='row' spacing={2}>
             <Button
-              onClick={handleClickMenu}
+              onClick={handleClick}
               id='header-button-menu'
               variant='outlined'
               aria-controls={isOpen ? 'header-menu' : undefined}
@@ -266,25 +287,25 @@ const Header = () => {
               anchorEl={anchorEl}
               MenuListProps={{ 'aria-labelledby': 'header-button' }}>
               <MenuList>
-                <MenuItem onClick={handleClickUsage}>
+                <MenuItem id='menu-usage' onClick={handleClick}>
                   <ListItemIcon>
                     <HelpIcon />
                   </ListItemIcon>
                   <ListItemText>{Constants.MENU_USAGE}</ListItemText>
                 </MenuItem>
-                <MenuItem onClick={handleClickDeveloping}>
+                <MenuItem id='menu-SwitchTheme' onClick={handleClick}>
                   <ListItemIcon>
                     <DarkModeIcon />
                   </ListItemIcon>
                   <ListItemText>{Constants.MENU_SWITCH_THEME}</ListItemText>
                 </MenuItem>
-                <MenuItem onClick={handleClickDeveloping}>
+                <MenuItem id='menu-share' onClick={handleClick}>
                   <ListItemIcon>
                     <ShareIcon />
                   </ListItemIcon>
                   <ListItemText>{Constants.MENU_SHARE}</ListItemText>
                 </MenuItem>
-                <MenuItem onClick={() => handleClickOpen()}>
+                <MenuItem id='menu-gist-post-dialog' onClick={handleClick}>
                   <ListItemIcon>
                     <GitHubIcon />
                   </ListItemIcon>
@@ -359,7 +380,8 @@ const Header = () => {
                   </DialogContent>
                   <DialogActions>
                     <Button
-                      onClick={() => hangleClickSign()}
+                      id='button-sign'
+                      onClick={handleClick}
                       color='primary'
                       sx={{
                         positon: 'left',
