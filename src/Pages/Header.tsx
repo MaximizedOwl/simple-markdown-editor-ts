@@ -203,6 +203,12 @@ const Header = () => {
     }
   };
 
+  const handleClickDeveloping = () => {
+    setSnackbarType('info');
+    setSnackbarMessage(Constants.Developing);
+    setIsOpenGistPostSnackbar(true);
+  };
+
   const [openGistDialog, setOpenGistDialog] = useState(false);
 
   const handleClickOpen = () => {
@@ -266,13 +272,13 @@ const Header = () => {
                   </ListItemIcon>
                   <ListItemText>{Constants.MENU_USAGE}</ListItemText>
                 </MenuItem>
-                <MenuItem onClick={handleCloseMenu}>
+                <MenuItem onClick={handleClickDeveloping}>
                   <ListItemIcon>
                     <DarkModeIcon />
                   </ListItemIcon>
                   <ListItemText>{Constants.MENU_SWITCH_THEME}</ListItemText>
                 </MenuItem>
-                <MenuItem onClick={handleCloseMenu}>
+                <MenuItem onClick={handleClickDeveloping}>
                   <ListItemIcon>
                     <ShareIcon />
                   </ListItemIcon>

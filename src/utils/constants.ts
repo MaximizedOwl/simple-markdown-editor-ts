@@ -1,5 +1,10 @@
 namespace Constants {
   /* 
+    Common
+  */
+  export const Developing: string = 'Unavailable, in development.';
+
+  /* 
     header
   */
   export const SITE_TITLE: string = 'Simple Markdown Editor';
