@@ -196,7 +196,7 @@ const Header = () => {
   /* 
     Gistに投稿する処理
   */
-  const handleClickPostGist: SubmitHandler<GistFormInput> = async (data) => {
+  const postGist: SubmitHandler<GistFormInput> = async (data) => {
     if (isSignedIn) {
       const octokit = new Octokit({
         auth: token,
@@ -396,7 +396,8 @@ const Header = () => {
                       Cancel
                     </Button>
                     <Button
-                      onClick={handleSubmit(handleClickPostGist)}
+                      id='button-post-gist'
+                      onClick={handleSubmit(postGist)}
                       color='primary'>
                       Post
                     </Button>
